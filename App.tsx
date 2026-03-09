@@ -332,8 +332,7 @@ const App: React.FC = () => {
               Bridging systematic rigor with data-driven clarity.
             </h2>
             <p className="text-[#8892b0] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
-              I'm an <span className="text-[#64ffda] font-medium">{CV_DATA.currentRole}</span>. 
-              <HighlightText text=" I leverage my background in game design and QA to drive data-informed decision making through systematic analysis." />
+              {CV_DATA.bio}
             </p>
             <div className="flex flex-wrap gap-4">
               <a 

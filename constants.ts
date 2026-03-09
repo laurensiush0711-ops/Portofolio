@@ -39,7 +39,7 @@ export const CV_DATA = {
   targetRole: "Aspiring Data Analyst",
   currentRole: "Aspiring Data Analyst",
   profileImage: "profile.jpg",
-  bio: "I am a detail-oriented Data Analyst with a strong background in game design and quality assurance. I have diverse experience in the gaming industry, including roles as a Co-Founder and Game Designer at Rise Up Studio for 2 years, a full-time Game Designer at Wisgame for 1 year, and a QA Tester at Forgefun for over a year, supporting multiple in-development and live projects. As a QA Tester, I ensured product quality through systematic testing and structured reporting, identifying over 120 bugs and significantly enhancing game stability. My analytical skills facilitated informed decision-making by employing data-driven approaches to detect patterns in bugs and inconsistencies. I am currently enhancing my skills in data cleaning, exploratory analysis, and data visualization to transition effectively into data analytics. I am eager to leverage my unique experiences to drive reliable and high-quality outcomes in data analytics.",
+  bio: "Detail-oriented Data Analyst with a background in game design and QA. Skilled in data cleaning, exploratory analysis, and data visualization.",
   email: "Laurensiush.0711@gmail.com",
   linkedin: "linkedin.com/in/laurensius-haryo-radyobaskoro-p-373146177",
   github: "github.com/Parad5050",
