@@ -185,69 +185,6 @@ export const PROJECTS: Project[] = [
     note: "Recommended a 'Premium Indie' strategy for optimal algorithmic visibility."
   },
   {
-    id: 'proj-customer-segmentation',
-    title: "Customer Segmentation Analysis",
-    period: "November, 2025 - December, 2025",
-    description: "Analyzed customer purchase behavior to identify distinct segments for targeted marketing strategies using SQL and Tableau.",
-    summary: "Conducted comprehensive customer segmentation analysis using SQL for data extraction and Tableau for visualization. Identified 5 distinct customer personas based on purchasing patterns, frequency, and average order value.",
-    goals: "Identify distinct customer segments to enable targeted marketing campaigns.",
-    process: "Extracted and cleaned customer transaction data using SQL. Performed RFM (Recency, Frequency, Monetary) analysis to segment customers.",
-    output: "Created interactive Tableau dashboard showcasing 5 customer segments with actionable insights for marketing team.",
-    achievements: [
-      "Segmented customer base into 5 distinct groups with unique behavioral profiles.",
-      "Identified high-value customer segment representing 15% of customers generating 45% of revenue.",
-      "Recommended personalized marketing strategies for each segment, potentially increasing conversion by 20%.",
-      "Built interactive Tableau dashboard enabling real-time segment analysis."
-    ],
-    tags: ["SQL", "Tableau", "RFM Analysis", "Customer Analytics", "Data Visualization"],
-    metricLabel: "Customer Segments",
-    metricValue: 5,
-    link: "",
-    note: "Placeholder project - customize with actual project details."
-  },
-  {
-    id: 'proj-ecommerce-cleaning',
-    title: "E-Commerce Data Cleaning",
-    period: "October, 2025 - November, 2025",
-    description: "Cleaned and transformed messy e-commerce dataset containing 50,000+ transaction records using Python and Pandas.",
-    summary: "Performed extensive data cleaning on a messy e-commerce dataset with 50,000+ records. Handled missing values, duplicates, inconsistent formatting, and outliers to prepare data for analysis.",
-    goals: "Transform raw e-commerce data into analysis-ready format.",
-    process: "Used Python Pandas for data cleaning. Applied techniques including missing value imputation, duplicate removal, data type conversion, and outlier detection.",
-    output: "Delivered clean, analysis-ready dataset with 98% data quality score and comprehensive data dictionary.",
-    achievements: [
-      "Cleaned 50,000+ transaction records, improving data quality from 65% to 98%.",
-      "Identified and resolved 15% duplicate entries and 8% missing critical values.",
-      "Created automated cleaning pipeline reducing manual effort by 80% for future datasets.",
-      "Documented data cleaning process enabling reproducibility and team knowledge sharing."
-    ],
-    tags: ["Python", "Pandas", "Data Cleaning", "Excel", "Jupyter Notebook"],
-    metricLabel: "Records Cleaned",
-    metricValue: 50000,
-    link: "",
-    note: "Placeholder project - customize with actual project details."
-  },
-  {
-    id: 'proj-eda',
-    title: "Exploratory Data Analysis",
-    period: "September, 2025 - October, 2025",
-    description: "Performed comprehensive exploratory data analysis on public dataset to uncover patterns, correlations, and actionable insights.",
-    summary: "Conducted thorough exploratory data analysis (EDA) on public dataset to discover hidden patterns and correlations. Generated statistical summaries, visualizations, and key findings to guide business decisions.",
-    goals: "Uncover patterns and correlations to inform business strategy.",
-    process: "Used Python (Pandas, Matplotlib, Seaborn) for statistical analysis and visualization. Applied correlation analysis, distribution checking, and trend identification.",
-    output: "Delivered comprehensive EDA report with 10+ key insights and 5 actionable recommendations for stakeholders.",
-    achievements: [
-      "Analyzed 20+ variables identifying 8 significant correlations with target metric.",
-      "Discovered 3 unexpected patterns leading to new business hypotheses.",
-      "Created 15+ visualizations effectively communicating complex findings to non-technical stakeholders.",
-      "Provided 5 actionable recommendations based on data-driven insights."
-    ],
-    tags: ["Python", "Pandas", "Matplotlib", "Seaborn", "EDA", "Statistical Analysis"],
-    metricLabel: "Variables Analyzed",
-    metricValue: 20,
-    link: "",
-    note: "Placeholder project - customize with actual project details."
-  },
-  {
     id: 'proj-thaumaturgy',
     title: "Thaumaturgy: Cast and Clash",
     period: "Sept, 2019 - Oct, 2021",
