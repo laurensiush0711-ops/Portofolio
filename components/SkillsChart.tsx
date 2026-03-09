@@ -67,11 +67,10 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
     return null;
   };
 
-  // Empty state
   if (data.length === 0) {
     return (
       <div 
-        className="h-[350px] w-full bg-[#112240] rounded-lg p-4 border border-[#233554] flex items-center justify-center"
+        className="h-[400px] w-full bg-[#112240] rounded-lg p-4 border border-[#233554] flex items-center justify-center"
         role="img"
         aria-label="No skills data available"
       >
@@ -85,16 +84,16 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
 
   return (
     <div 
-      className="h-[350px] w-full bg-[#112240] rounded-lg p-4 border border-[#233554]"
+      className="h-[400px] w-full bg-[#112240] rounded-lg p-4 border border-[#233554]"
       role="img"
       aria-label={`Skills radar chart showing ${category === 'all' ? 'all' : category} competencies`}
     >
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+        <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
           <PolarGrid stroke="#233554" />
           <PolarAngleAxis 
             dataKey="subject" 
-            tick={{ fill: '#8892b0', fontSize: 11 }} 
+            tick={{ fill: '#8892b0', fontSize: 9 }} 
           />
           <PolarRadiusAxis 
             angle={30} 
