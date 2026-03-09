@@ -93,7 +93,9 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
           <PolarGrid stroke="#233554" />
           <PolarAngleAxis 
             dataKey="subject" 
-            tick={{ fill: '#8892b0', fontSize: 9 }} 
+            tick={{ fill: '#8892b0', fontSize: 9 }}
+            tickLine={false}
+            stroke="#233554"
           />
           <PolarRadiusAxis 
             angle={30} 
