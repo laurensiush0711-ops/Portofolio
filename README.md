@@ -1,10 +1,10 @@
 # Laurensius Haryo - Portfolio
 
-A personal portfolio website showcasing my journey as an aspiring Data Analyst transitioning from game design and QA background.
+A personal portfolio website showcasing my journey as a Data-Driven QA professional transitioning from game design and QA background.
 
 ## About Me
 
-I am a detail-oriented aspiring Data Analyst with a passion for turning complex data into actionable insights. With a background in game design and quality assurance, I bring unique analytical skills to data analytics.
+I am a detail-oriented QA professional with a passion for data-driven testing and quality assurance. With a background in game design and quality assurance, I leverage analytical approaches to enhance testing accuracy and product quality.
 
 ## Tech Stack
 
@@ -13,13 +13,11 @@ I am a detail-oriented aspiring Data Analyst with a passion for turning complex 
 - **Vite** - Build tool
 - **Tailwind CSS** - Styling
 - **Recharts** - Data visualization
-- **Google Gemini API** - AI-powered career chat
 
 ## Features
 
 - **Interactive Portfolio** - Showcase of projects, skills, and experience
 - **Skills Visualization** - Interactive radar chart showing technical and soft skills
-- **AI Career Chat** - Gemini-powered chatbot for career-related questions
 - **Responsive Design** - Works on desktop and mobile
 - **Project Case Studies** - Detailed project breakdowns with achievements
 
@@ -42,10 +40,10 @@ A turn-based RPG with 12+ unique characters and 20+ levels. Created comprehensiv
 
 ## Skills
 
-### Data Analytics
+### Data-Driven QA
 - Python, SQL, Spreadsheets
 - Tableau, Power BI
-- Data Cleaning, EDA, Data Visualization
+- Bug Analysis, Data Visualization, Test Automation
 
 ### QA & Testing
 - Manual Testing, Postman
@@ -68,7 +66,7 @@ A turn-based RPG with 12+ unique characters and 20+ levels. Created comprehensiv
 
 ## Education
 
-- **RevoU** - Data Analytics Mini Course (Oct 2024 - Present)
+- **RevoU** - Data-Driven QA Certification (Oct 2024 - Present)
 - **Binus University** - Computer Science (Aug 2017 - Dec 2021)
 
 ## Getting Started

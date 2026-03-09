@@ -36,10 +36,10 @@ export const ANIMATION_DELAY_INCREMENT = 0.05;
 // ==========================================
 export const CV_DATA = {
   name: "Laurensius Haryo",
-  targetRole: "Aspiring Data Analyst",
-  currentRole: "Aspiring Data Analyst",
+  targetRole: "Data-Driven QA Professional",
+  currentRole: "QA Tester transitioning to Data-Driven QA",
   profileImage: "profile.jpg",
-  bio: "Detail-oriented Data Analyst with a background in game design and QA. Skilled in data cleaning, exploratory analysis, and data visualization.",
+  bio: "Detail-oriented QA professional with a background in game design. Skilled in data-driven testing, bug analysis, and quality assurance using analytical approaches.",
   email: "Laurensiush.0711@gmail.com",
   linkedin: "linkedin.com/in/laurensius-haryo-radyobaskoro-p-373146177",
   github: "github.com/Parad5050",
@@ -59,7 +59,7 @@ export const SKILLS: Skill[] = [
   { id: 'skill-spreadsheets', name: "Spreadsheets", level: 90, category: 'Data' },
   { id: 'skill-tableau', name: "Tableau", level: 85, category: 'Data' },
   { id: 'skill-powerbi', name: "Power BI", level: 75, category: 'Data' },
-  { id: 'skill-data-analytics', name: "Data Analytics", level: 80, category: 'Data' },
+  { id: 'skill-data-analytics', name: "Data-Driven QA", level: 80, category: 'Data' },
   
   // Technical - QA
   { id: 'skill-manual-testing', name: "Manual Testing", level: 90, category: 'QA' },
@@ -88,7 +88,7 @@ export const EDUCATION: Education[] = [
   {
     id: 'edu-revou',
     institution: "RevoU",
-    degree: "Data Analytics Mini Course",
+    degree: "Data-Driven QA Certification",
     period: "October, 2024 – Present",
     location: "Jakarta, Indonesia",
     highlights: [
