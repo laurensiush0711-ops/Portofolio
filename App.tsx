@@ -11,7 +11,6 @@ import {
   SCROLLspy_OFFSET
 } from './constants';
 import { Project } from './types';
-import CareerBot from './components/CareerBot';
 import SkillsChart from './components/SkillsChart';
 
 // ==========================================
@@ -386,10 +385,6 @@ const App: React.FC = () => {
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#64ffda] z-40 m-2 opacity-50"></div>
               </div>
 
-              <div className="absolute -bottom-6 right-0 md:-right-6 bg-[#0a192f] border border-[#233554] px-4 py-2 rounded-md shadow-2xl z-50 mono text-[9px] text-[#64ffda] border-l-4 border-l-[#64ffda] flex items-center gap-2">
-                 <div className="w-1.5 h-1.5 rounded-full bg-[#64ffda] animate-pulse"></div>
-                 <span className="tracking-widest uppercase">Transitioning_to_Analytics</span>
-              </div>
             </div>
           </div>
         </section>
@@ -740,8 +735,6 @@ const App: React.FC = () => {
       <footer className="py-12 text-center opacity-50 mono text-[10px]">
         Designed & Built by {CV_DATA.name} &copy; {new Date().getFullYear()}
       </footer>
-
-      <CareerBot />
     </div>
   );
 };
