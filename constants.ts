@@ -40,6 +40,7 @@ export const CV_DATA = {
   currentRole: "QA Tester transitioning to Data-Driven QA",
   profileImage: "profile.jpg",
   bio: "I am a data-driven Quality Assurance professional with over two years of experience in game development. I documented 120+ bugs in Unity using Notion and conducted root cause analysis by categorizing issues based on urgency, frequency, and impact on project goals, reducing investigation time by 30% and improving team efficiency. This experience developed my structured, detail-oriented approach to problem-solving. To enhance my skill in data, I join RevoU Data Analytics program, building hands-on skills in data cleaning, exploratory data analysis (EDA), and data visualization using Tableau and Google Colab (Python), with a focus on transforming data into actionable insights that support product, business, and operational decisions.",
+  heroBio: "Detail-oriented QA professional with a background in game design. Skilled in data-driven testing, bug analysis, and quality assurance using analytical approaches.",
   email: "Laurensiush.0711@gmail.com",
   linkedin: "linkedin.com/in/laurensius-haryo-radyobaskoro-p-373146177",
   github: "github.com/Parad5050",

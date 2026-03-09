@@ -332,7 +332,7 @@ const App: React.FC = () => {
               Bridging systematic rigor with data-driven clarity.
             </h2>
             <p className="text-[#8892b0] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
-              <HighlightText text={CV_DATA.bio} />
+              <HighlightText text={CV_DATA.heroBio} />
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
