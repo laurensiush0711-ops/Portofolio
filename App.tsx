@@ -332,7 +332,7 @@ const App: React.FC = () => {
               Bridging systematic rigor with data-driven clarity.
             </h2>
             <p className="text-[#8892b0] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
-              {CV_DATA.bio}
+              <HighlightText text={CV_DATA.bio} />
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
@@ -574,7 +574,7 @@ const App: React.FC = () => {
           <p className="mono text-[#64ffda] mb-4 text-sm tracking-widest uppercase">06. Contact</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#ccd6f6] mb-6">Let's Connect</h2>
           <p className="text-[#8892b0] mb-12">
-            I'm currently looking for new opportunities in Data Analytics. My inbox is always open!
+            I'm currently looking for new opportunities in Data-Driven QA. My inbox is always open!
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
