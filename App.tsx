@@ -8,7 +8,10 @@ import {
   NAV_ITEMS,
   Z_INDEX,
   SCROLL_OFFSET,
-  SCROLLspy_OFFSET
+  SCROLLspy_OFFSET,
+  HERO_SUBTITLE,
+  CONTACT_TITLE,
+  CONTACT_DESCRIPTION
 } from './constants';
 import { Project } from './types';
 import SkillsChart from './components/SkillsChart';
@@ -329,7 +332,7 @@ const App: React.FC = () => {
               {CV_DATA.name}.
             </h1>
             <h2 className="text-2xl md:text-5xl font-bold text-[#8892b0] mb-8 reveal [animation-delay:0.2s] leading-tight">
-              Bridging systematic rigor with data-driven clarity.
+              {HERO_SUBTITLE}
             </h2>
             <p className="text-[#8892b0] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
               <HighlightText text={CV_DATA.heroBio} />
@@ -572,9 +575,9 @@ const App: React.FC = () => {
         {/* Contact Section */}
         <section id="contact" className="py-32 text-center max-w-2xl mx-auto">
           <p className="mono text-[#64ffda] mb-4 text-sm tracking-widest uppercase">06. Contact</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#ccd6f6] mb-6">Let's Connect</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#ccd6f6] mb-6">{CONTACT_TITLE}</h2>
           <p className="text-[#8892b0] mb-12">
-            I'm currently looking for new opportunities in Data-Driven QA. My inbox is always open!
+            {CONTACT_DESCRIPTION}
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
