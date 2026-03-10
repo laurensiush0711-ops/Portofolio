@@ -212,23 +212,22 @@ export const PROJECTS: Project[] = [
     id: 'proj-red-convent',
     title: "Red Convent",
     period: "Jan, 2020 - Aug, 2021",
-    description: "Developed a turn-based RPG game with 12+ unique characters and 20+ levels as Lead Game Designer.",
-    summary: "A multiplatform turn-based RPG game where I served as Lead Game Designer. Created a comprehensive 50-page Game Design Document (GDD) covering all game mechanics, characters, story, and progression systems.",
+    description: "A Turn-based RPG Mobile Game where I served as Lead Game Designer.",
+    summary: "Developed a turn-based RPG game with 12 unique characters and 20+ levels. Created a comprehensive 50-page Game Design Document (GDD) covering all game mechanics, characters, story, and progression systems.",
     goals: "Create an engaging turn-based RPG with balanced mechanics and intuitive UI.",
-    process: "Designed and wrote a comprehensive 50-page GDD. Created UI/UX designs for 7 major interfaces. Conducted 5 playtesting sessions with 40+ participants to gather feedback and refine gameplay.",
-    output: "A polished turn-based RPG with 12+ unique characters and 20+ levels, featuring balanced mechanics and improved user experience.",
+    process: "Designed and wrote a comprehensive 50-page GDD. Created UI/UX designs for 7 major interfaces. Balanced game mechanics for 12 characters.",
+    output: "A polished turn-based RPG with 12 unique characters and 20+ levels, featuring balanced mechanics and improved user experience.",
     achievements: [
-      "Developed a turn-based RPG game with 12+ unique characters and 20+ levels.",
+      "Developed a turn-based RPG game with 12 unique characters and 20+ levels.",
       "Designed and wrote a comprehensive 50-page GDD covering all game mechanics, characters, story, and progression systems.",
-      "Created UI/UX designs for 7 major interfaces, significantly improving user experience.",
-      "Balanced game mechanics for 12 characters to ensure fairness and engaging gameplay.",
-      "Conducted 5 playtesting sessions with 40+ participants to gather feedback and refine gameplay."
+      "Created UI/UX designs for 7 major interfaces, improving user experience by 25%.",
+      "Balanced game mechanics for 12 characters to ensure fairness and engaging gameplay."
     ],
-    tags: ["GDD", "Unity", "UI/UX Design", "Turn-based RPG", "Playtesting", "Character Design"],
+    tags: ["Unity", "GDD", "UI/UX Design", "Turn-based RPG", "Character Design"],
     metricLabel: "Characters",
     metricValue: 12,
     link: "",
-    note: "Turn-based RPG with 12+ unique characters and 20+ levels."
+    note: "Turn-based RPG with 12 unique characters and 20+ levels."
   }
 ];
 
