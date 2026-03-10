@@ -57,25 +57,27 @@ export const getCareerAdvice = async (userMessage: string): Promise<string> => {
     }
     
     return response.text;
-  } catch (error: any) {
+  } catch (error: unknown) {
     clearTimeout(timeoutId);
     console.error("Gemini Error:", error);
     
     // Specific error messages based on error type
-    if (error.name === 'AbortError') {
-      return "⏱️ The request timed out. Please try again in a moment.";
-    }
-    
-    if (error.message?.includes('API key')) {
-      return "🔑 API Error: Invalid or expired API key. Please verify configuration.";
-    }
-    
-    if (error.message?.includes('rate limit')) {
-      return "🚦 Rate limit reached. Please wait a moment before sending another message.";
-    }
-    
-    if (error.message?.includes('network')) {
-      return "📡 Network Error: Please check your internet connection and try again.";
+    if (error instanceof Error) {
+      if (error.name === 'AbortError') {
+        return "⏱️ The request timed out. Please try again in a moment.";
+      }
+      
+      if (error.message?.includes('API key')) {
+        return "🔑 API Error: Invalid or expired API key. Please verify configuration.";
+      }
+      
+      if (error.message?.includes('rate limit')) {
+        return "🚦 Rate limit reached. Please wait a moment before sending another message.";
+      }
+      
+      if (error.message?.includes('network')) {
+        return "📡 Network Error: Please check your internet connection and try again.";
+      }
     }
     
     return "😕 I'm having trouble connecting right now. Please try again shortly.";

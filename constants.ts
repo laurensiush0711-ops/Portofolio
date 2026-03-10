@@ -35,7 +35,7 @@ export const ANIMATION_DELAY_INCREMENT = 0.05;
 // CV Data
 // ==========================================
 export const CV_DATA = {
-  name: "Laurensius Haryo",
+  name: "Laurensius Haryo Radyobaskoro",
   targetRole: "Data-Driven QA Professional",
   currentRole: "QA Tester transitioning to Data-Driven QA",
   profileImage: "profile.jpg",
