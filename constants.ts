@@ -212,7 +212,7 @@ export const PROJECTS: Project[] = [
     id: 'proj-red-convent',
     title: "Red Convent",
     period: "Jan, 2020 - Aug, 2021",
-    description: "A Turn-based RPG Mobile Game where I served as Lead Game Designer.",
+    description: "Developed a turn-based RPG mobile game with 12 unique characters and 20+ levels.",
     summary: "Developed a turn-based RPG game with 12 unique characters and 20+ levels. Created a comprehensive 50-page Game Design Document (GDD) covering all game mechanics, characters, story, and progression systems.",
     goals: "Create an engaging turn-based RPG with balanced mechanics and intuitive UI.",
     process: "Designed and wrote a comprehensive 50-page GDD. Created UI/UX designs for 7 major interfaces. Balanced game mechanics for 12 characters.",
