@@ -83,14 +83,27 @@
     {
       "id": "exp-forgefun",
       "company": "Forgefun",
-      "role": "QA Tester",
-      "period": "August, 2023 – November, 2024",
+      "role": "QA Tester (AI Tester)",
+      "period": "December, 2023 – November, 2024",
       "location": "Jakarta, Indonesia",
       "isQA": true,
       "description": [
-        "Tested game features across 5 projects, identifying and documenting 120+ bugs to enhance overall game stability and quality.",
-        "Validated API responses and AI chat behaviors, enhancing system reliability by resolving over 50 issues during feature development.",
-        "Employed data-driven approaches to detect patterns in bugs and inconsistencies, facilitating informed decision-making."
+        "Tested and documented 3 AI-generated character iterations using Notion for bug tracking, in 9 months resulting in a 65% reduction in recurring issues.",
+        "Optimized AI character prompts after feature updates to maintain compatibility with current AI chat systems, increasing contextual accuracy by 30% based on internal QA evaluation.",
+        "Evaluated alternative LLM models compatible with updated prompts and tools to optimize token allocation, reducing token usage and lowering operational cost by 12%.",
+        "Validated API integration between game features and AI characters using Postman and Telegram coordination, decreasing integration-related errors by 40%."
+      ]
+    },
+    {
+      "id": "exp-forgefun-game",
+      "company": "Forgefun",
+      "role": "QA Tester (Game Tester)",
+      "period": "August, 2023 – December, 2024",
+      "location": "Jakarta, Indonesia",
+      "isQA": true,
+      "description": [
+        "Tested game features across 4 prototypes and 1 main project from Unity to Notion with over 120 recorded bugs, contributing to higher release stability.",
+        "Analyzed and categorized issues by urgency, repetition, and project impact in Notion, reducing investigation time by 30% and supporting faster team resolution."
       ]
     },
     {
