@@ -102,7 +102,9 @@
       "isQA": true,
       "description": [
         "Tested game features across 4 prototypes and 1 main project from Unity to Notion with over 120 recorded bugs, contributing to higher release stability.",
-        "Analyzed and categorized issues by urgency, repetition, and project impact in Notion, reducing investigation time by 30% and supporting faster team resolution."
+        "Analyzed and categorized issues by urgency, repetition, and project impact in Notion, reducing investigation time by 30% and supporting faster team resolution.",
+        "Collaborated with developers to ensure effective bug fixes and feature improvements through clear documentation and follow-up.",
+        "Conducted regression testing after bug fixes to verify resolution and prevent new issues from emerging."
       ]
     },
     {
@@ -172,8 +174,8 @@
     {
       "id": "proj-red-convent",
       "title": "Red Convent",
-      "period": "Jan, 2020 - Aug, 2021",
-      "description": "Developed a turn-based RPG mobile game with 12 unique characters and 20+ levels.",
+      "period": "Aug, 2020 - Aug, 2021",
+      "description": "Developed a turn-based RPG mobile game with 12 unique characters and 20+ levels as Lead Game Designer.",
       "summary": "Developed a turn-based RPG game with 12 unique characters and 20+ levels. Created a comprehensive 50-page Game Design Document (GDD) covering all game mechanics, characters, story, and progression systems.",
       "goals": "Create an engaging turn-based RPG with balanced mechanics and intuitive UI.",
       "process": "Designed and wrote a comprehensive 50-page GDD. Created UI/UX designs for 7 major interfaces. Balanced game mechanics for 12 characters.",
