@@ -172,25 +172,25 @@
       "note": "Conducted 6 playtesting sessions with over 50 participants."
     },
     {
-      "id": "proj-red-convent",
-      "title": "Red Convent",
-      "period": "Aug, 2020 - Aug, 2021",
-      "description": "Developed a turn-based RPG mobile game with 12 unique characters and 20+ levels as Lead Game Designer.",
-      "summary": "Developed a turn-based RPG game with 12 unique characters and 20+ levels. Created a comprehensive 50-page Game Design Document (GDD) covering all game mechanics, characters, story, and progression systems.",
-      "goals": "Create an engaging turn-based RPG with balanced mechanics and intuitive UI.",
-      "process": "Designed and wrote a comprehensive 50-page GDD. Created UI/UX designs for 7 major interfaces. Balanced game mechanics for 12 characters.",
-      "output": "A polished turn-based RPG with 12 unique characters and 20+ levels, featuring balanced mechanics and improved user experience.",
+      "id": "proj-red-convenant",
+      "title": "Red Covenant",
+      "period": "September, 2023 - November, 2024",
+      "description": "A QA Testing Project for Forgefun game featuring comprehensive bug tracking and game feature validation.",
+      "summary": "Documented and tested game features for Red Covenant, contributing to improved game quality and stability through systematic QA processes.",
+      "goals": "Ensure game quality through comprehensive testing and bug documentation.",
+      "process": "Documented bugs in Notion with structured categorization. Tested game features including API, web components, and AI chat using Unity, Firebase, and Postman. Provided gameplay insights based on genre benchmarking.",
+      "output": "Reduced integration-related errors by 35% and prevented 100% of critical blockers during marketing showcases.",
       "achievements": [
-        "Developed a turn-based RPG game with 12 unique characters and 20+ levels.",
-        "Designed and wrote a comprehensive 50-page GDD covering all game mechanics, characters, story, and progression systems.",
-        "Created UI/UX designs for 7 major interfaces, improving user experience by 25%.",
-        "Balanced game mechanics for 12 characters to ensure fairness and engaging gameplay."
+        "Documented over 120 bugs in Notion with structured categorization by urgency and impact, reducing investigation time by 30%.",
+        "Tested and validated game features including API, web components, and AI chat using Unity, Firebase, and Postman, contributing to a 35% reduction in integration-related errors before release milestones.",
+        "Provided and aligned gameplay improvement insights based on genre benchmarking and comparable feature references, contributing to 20% fewer post-update revisions across major feature releases.",
+        "Reviewed and monitored demo builds prior to marketing showcases, preventing 100% of critical blockers during public events and reducing last-minute fixes by 40%."
       ],
-      "tags": ["Unity", "GDD", "UI/UX Design", "Turn-based RPG", "Character Design"],
-      "metricLabel": "Characters",
-      "metricValue": 12,
+      "tags": ["Unity", "Firebase", "Postman", "Notion", "QA Testing", "Bug Tracking"],
+      "metricLabel": "Bugs Documented",
+      "metricValue": 120,
       "link": "",
-      "note": "Turn-based RPG with 12 unique characters and 20+ levels."
+      "note": "Reduced investigation time by 30% through structured bug categorization."
     }
   ]
 }
