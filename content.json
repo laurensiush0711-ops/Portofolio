@@ -66,36 +66,6 @@
   ],
   "experience": [
     {
-      "id": "exp-riseup",
-      "company": "Rise Up Studio",
-      "role": "Co-Founder & Game Designer",
-      "period": "July, 2020 – May, 2022",
-      "location": "Jakarta, Indonesia",
-      "isQA": false,
-      "description": [
-        "Co-founded a game studio focused on developing competitive mobile games.",
-        "Led game design for a team of 5 developers, creating engaging gameplay mechanics.",
-        "Managed project timelines and coordinated between design and development teams.",
-        "Conducted market research to identify player preferences and trending genres."
-      ]
-    },
-    {
-      "id": "exp-wisgame",
-      "company": "Wisgame",
-      "role": "Game Designer",
-      "period": "June, 2022 – August, 2023",
-      "location": "Jakarta, Indonesia",
-      "isQA": false,
-      "description": [
-        "Designed over 30 character stats and abilities, along with comprehensive level layouts, enhancing player experience and balance.",
-        "Balanced game mechanics for 12 unique characters, improving game fairness and leading to a 20% increase in user satisfaction based on feedback.",
-        "Documented over 50 entries for game design processes, establishing a structured reference that improved team communication by 30%.",
-        "Created and assigned tasks aligned with project goals, resulting in timely completion of milestones and improved workflow.",
-        "Formulated balancing formulas for character abilities, leading to a 25% improvement in overall player balance.",
-        "Mocked-Up UI/UX layouts for 3 major game interfaces, improving user navigation and reducing confusion by 20%."
-      ]
-    },
-    {
       "id": "exp-forgefun-game",
       "company": "Forgefun",
       "role": "QA Tester (Game Tester)",
@@ -121,6 +91,36 @@
         "Optimized AI character prompts after feature updates to maintain compatibility with current AI chat systems, increasing contextual accuracy by 30% based on internal QA evaluation.",
         "Evaluated alternative LLM models compatible with updated prompts and tools to optimize token allocation, reducing token usage and lowering operational cost by 12%.",
         "Validated API integration between game features and AI characters using Postman and Telegram coordination, decreasing integration-related errors by 40%."
+      ]
+    },
+    {
+      "id": "exp-wisgame",
+      "company": "Wisgame",
+      "role": "Game Designer",
+      "period": "June, 2022 – August, 2023",
+      "location": "Jakarta, Indonesia",
+      "isQA": false,
+      "description": [
+        "Designed over 30 character stats and abilities, along with comprehensive level layouts, enhancing player experience and balance.",
+        "Balanced game mechanics for 12 unique characters, improving game fairness and leading to a 20% increase in user satisfaction based on feedback.",
+        "Documented over 50 entries for game design processes, establishing a structured reference that improved team communication by 30%.",
+        "Created and assigned tasks aligned with project goals, resulting in timely completion of milestones and improved workflow.",
+        "Formulated balancing formulas for character abilities, leading to a 25% improvement in overall player balance.",
+        "Mocked-Up UI/UX layouts for 3 major game interfaces, improving user navigation and reducing confusion by 20%."
+      ]
+    },
+    {
+      "id": "exp-riseup",
+      "company": "Rise Up Studio",
+      "role": "Co-Founder & Game Designer",
+      "period": "July, 2020 – May, 2022",
+      "location": "Jakarta, Indonesia",
+      "isQA": false,
+      "description": [
+        "Co-founded a game studio focused on developing competitive mobile games.",
+        "Led game design for a team of 5 developers, creating engaging gameplay mechanics.",
+        "Managed project timelines and coordinated between design and development teams.",
+        "Conducted market research to identify player preferences and trending genres."
       ]
     }
   ],
