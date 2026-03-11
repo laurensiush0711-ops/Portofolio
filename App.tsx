@@ -51,6 +51,7 @@ const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   // Memoize derived values
   const waNumber = CV_DATA.phone.replace(/[^0-9]/g, '');
@@ -650,6 +651,7 @@ const App: React.FC = () => {
                   {selectedProject.images.map((img, idx) => (
                     <div 
                       key={idx}
+                      onClick={() => setLightboxImage(img)}
                       className="group relative overflow-hidden rounded-lg border border-[#233554] cursor-pointer hover:border-[#64ffda] transition-all duration-300"
                     >
                       <img 
@@ -754,6 +756,28 @@ const App: React.FC = () => {
                )}
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <div 
+          className="fixed inset-0 z-[200] flex items-center justify-center p-6"
+          onClick={() => setLightboxImage(null)}
+        >
+          <div className="absolute inset-0 bg-[#020c1b]/95 backdrop-blur-md" />
+          <button 
+            className="absolute top-6 right-6 text-[#8892b0] hover:text-[#64ffda] p-2 z-10"
+            aria-label="Close lightbox"
+          >
+            <i className="fas fa-times text-xl"></i>
+          </button>
+          <img 
+            src={lightboxImage} 
+            alt="Full size preview"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl z-10"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
 
