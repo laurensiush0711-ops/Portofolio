@@ -645,15 +645,22 @@ const App: React.FC = () => {
 
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="mb-8">
-                <p className="mono text-[#64ffda] text-xs tracking-widest uppercase mb-3">Project Preview</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <p className="mono text-[#64ffda] text-xs tracking-widest uppercase mb-4">Project Preview</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {selectedProject.images.map((img, idx) => (
-                    <img 
+                    <div 
                       key={idx}
-                      src={img} 
-                      alt={`${selectedProject.title} preview ${idx + 1}`}
-                      className="w-full h-40 object-cover rounded-lg border border-[#233554]"
-                    />
+                      className="group relative overflow-hidden rounded-lg border border-[#233554] cursor-pointer hover:border-[#64ffda] transition-all duration-300"
+                    >
+                      <img 
+                        src={img} 
+                        alt={`${selectedProject.title} preview ${idx + 1}`}
+                        className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-[#020c1b]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-[#64ffda] text-xs mono uppercase tracking-widest">View</span>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
