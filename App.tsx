@@ -158,7 +158,7 @@ const App: React.FC = () => {
   // Nav link class generator
   const navLinkClass = (id: string) => `
     transition-colors duration-300 mono text-[13px] flex items-center gap-1 cursor-pointer
-    ${activeSection === id ? 'text-[#64ffda]' : 'text-[#ccd6f6] hover:text-[#64ffda]'}
+    ${activeSection === id ? 'text-teal-600' : 'text-gray-700 hover:text-teal-600'}
   `;
 
   // Render skill cards grouped by category
@@ -166,13 +166,13 @@ const App: React.FC = () => {
     const categorySkills = SKILLS.filter(s => s.category === category);
     
     return (
-      <div className="bg-[#112240] p-6 rounded-lg border border-[#233554] flex flex-col hover:border-[#64ffda]/30 transition-colors duration-300">
-        <h3 className="text-[#64ffda] font-semibold mb-4 mono text-lg">{category}</h3>
+      <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col hover:border-teal-600/30 transition-colors duration-300">
+        <h3 className="text-teal-600 font-semibold mb-4 mono text-lg">{category}</h3>
         <div className="flex flex-wrap gap-2">
           {categorySkills.map(skill => (
             <span 
               key={skill.id}
-              className="bg-[#233554] text-[#ccd6f6] text-xs font-medium px-3 py-1.5 rounded-full mono hover:text-[#64ffda] transition-colors cursor-default border border-transparent hover:border-[#64ffda]/30"
+              className="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full mono hover:text-teal-600 transition-colors cursor-default border border-transparent hover:border-teal-600/30"
             >
               {skill.name}
             </span>
@@ -183,14 +183,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`relative min-h-screen ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
+    <div className={`relative min-h-screen bg-white ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
       
       {/* Sidebars (Desktop only) */}
       <div 
         className="fixed bottom-0 left-10 w-10 hidden xl:flex flex-col items-center gap-6 z-50"
         aria-label="Social links"
       >
-        <div className="flex flex-col gap-6 mb-4 text-[#a8b2d1]">
+        <div className="flex flex-col gap-6 mb-4 text-gray-600">
           <a 
             href={`https://${CV_DATA.github}`} 
             target="_blank" 
@@ -222,20 +222,20 @@ const App: React.FC = () => {
         <div className="sidebar-line"></div>
       </div>
 
-      <div 
+        <div 
         className="fixed bottom-0 right-10 w-10 hidden xl:flex flex-col items-center gap-6 z-50"
         aria-label="Contact information"
       >
         <div className="flex flex-col items-center gap-8 mb-4">
           <a 
             href={mailtoLink} 
-            className="mono text-xs tracking-widest text-[#a8b2d1] hover:text-[#64ffda] hover:-translate-y-2 transition-all [writing-mode:vertical-rl]"
+            className="mono text-xs tracking-widest text-gray-600 hover:text-teal-600 hover:-translate-y-2 transition-all [writing-mode:vertical-rl]"
             aria-label="Send email"
           >
             {CV_DATA.email}
           </a>
           <span 
-            className="mono text-xs text-[#a8b2d1] opacity-50 [writing-mode:vertical-rl]"
+            className="mono text-xs text-gray-600 opacity-50 [writing-mode:vertical-rl]"
             aria-label="Discord username"
           >
             {CV_DATA.discord}
@@ -246,14 +246,14 @@ const App: React.FC = () => {
 
       {/* Navigation */}
       <nav 
-        className="fixed top-0 w-full z-[60] px-6 md:px-10 h-20 flex items-center justify-between backdrop-blur-md bg-[#0a192f]/85"
+        className="fixed top-0 w-full z-[60] px-6 md:px-10 h-20 flex items-center justify-between bg-white/95 backdrop-blur-md shadow-sm"
         style={{ zIndex: Z_INDEX.NAVBAR }}
         role="navigation"
         aria-label="Main navigation"
       >
         <div 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-[#64ffda] text-2xl font-bold mono group cursor-pointer z-[70]"
+          className="text-teal-600 text-2xl font-bold mono group cursor-pointer z-[70]"
           role="button"
           aria-label="Scroll to top"
           tabIndex={0}
@@ -281,7 +281,7 @@ const App: React.FC = () => {
           <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); window.print(); }} 
-            className="px-5 py-2.5 border border-[#64ffda] text-[#64ffda] mono text-[13px] rounded hover:bg-[#64ffda]/10 transition-colors ml-4"
+            className="px-5 py-2.5 border border-teal-600 text-teal-600 mono text-[13px] rounded hover:bg-teal-600/10 transition-colors ml-4"
             aria-label="Print resume"
           >
             Resume
@@ -291,22 +291,22 @@ const App: React.FC = () => {
         {/* Mobile Menu Toggle */}
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          className="md:hidden text-[#64ffda] p-2 relative z-[70] transition-transform duration-300 focus:outline-none"
+          className="md:hidden text-teal-600 p-2 relative z-[70] transition-transform duration-300 focus:outline-none"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
         >
           <div className="flex flex-col gap-1.5 w-8 items-end">
-            <span className={`block h-0.5 bg-[#64ffda] transition-all duration-300 ${isMenuOpen ? 'w-8 rotate-45 translate-y-2' : 'w-8'}`}></span>
-            <span className={`block h-0.5 bg-[#64ffda] transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'w-6'}`}></span>
-            <span className={`block h-0.5 bg-[#64ffda] transition-all duration-300 ${isMenuOpen ? 'w-8 -rotate-45 -translate-y-2' : 'w-4'}`}></span>
+            <span className={`block h-0.5 bg-teal-600 transition-all duration-300 ${isMenuOpen ? 'w-8 rotate-45 translate-y-2' : 'w-8'}`}></span>
+            <span className={`block h-0.5 bg-teal-600 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'w-6'}`}></span>
+            <span className={`block h-0.5 bg-teal-600 transition-all duration-300 ${isMenuOpen ? 'w-8 -rotate-45 -translate-y-2' : 'w-4'}`}></span>
           </div>
         </button>
 
         {/* Mobile Menu */}
         <aside 
           id="mobile-menu"
-          className={`fixed top-0 right-0 h-screen w-[min(75vw,350px)] bg-[#112240] shadow-2xl z-[65] flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`fixed top-0 right-0 h-screen w-[min(75vw,350px)] bg-white shadow-2xl z-[65] flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
           style={{ zIndex: Z_INDEX.MOBILE_MENU }}
           aria-hidden={!isMenuOpen}
         >
@@ -319,8 +319,8 @@ const App: React.FC = () => {
                     onClick={(e) => scrollToSection(e, item.id)} 
                     className="flex flex-col items-center gap-1 group"
                   >
-                    <span className="mono text-[#64ffda] text-sm">{item.number}</span>
-                    <span className="text-[#ccd6f6] text-xl group-hover:text-[#64ffda] transition-colors capitalize">{item.label}</span>
+                    <span className="mono text-teal-600 text-sm">{item.number}</span>
+                    <span className="text-gray-700 text-xl group-hover:text-teal-600 transition-colors capitalize">{item.label}</span>
                   </a>
                 </li>
               ))}
@@ -329,7 +329,7 @@ const App: React.FC = () => {
               <a 
                 href="#" 
                 onClick={(e) => { e.preventDefault(); window.print(); }} 
-                className="px-12 py-4 border border-[#64ffda] text-[#64ffda] mono text-base rounded hover:bg-[#64ffda]/10 transition-colors"
+                className="px-12 py-4 border border-teal-600 text-teal-600 mono text-base rounded hover:bg-teal-600/10 transition-colors"
                 aria-label="Print resume"
               >
                 Resume
@@ -341,7 +341,7 @@ const App: React.FC = () => {
         {/* Mobile Menu Overlay */}
         <div 
           onClick={() => setIsMenuOpen(false)}
-          className={`fixed inset-0 bg-[#020c1b]/80 backdrop-blur-sm z-[60] transition-opacity duration-300 md:hidden ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`fixed inset-0 bg-gray-900/50 backdrop-blur-sm z-[60] transition-opacity duration-300 md:hidden ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           aria-hidden="true"
         />
       </nav>

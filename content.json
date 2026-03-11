@@ -145,9 +145,9 @@
       "tags": ["Python", "Tableau", "Market Analysis", "Google Colab", "Data Cleaning"],
       "metricLabel": "Dataset Size",
       "metricValue": 65751,
-      "link": "https://github.com/Parad5050/Steam-Market-Analysis",
+      "link": "https://docs.google.com/presentation/d/1EF5Q3sxl-y7Pea0CC7CUX1gK9Pcd1FEr1pRizsr6gzk/edit?usp=sharing",
       "links": [
-        { "label": "Final Deck", "url": "https://docs.google.com/presentation/d/1EF5Q3sxl-y7Pea0CC7CUX1gK9Pcd1FEr1pRizsr6gzk/edit?usp=sharing" },
+        { "label": "GitHub", "url": "https://github.com/Parad5050/Steam-Market-Analysis" },
         { "label": "Tableau Dashboard", "url": "https://public.tableau.com/views/FSDA_OCT25_Laurensius_Haryo_Final_Project2/SteamMarketAnalysis2021-2025?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" }
       ],
       "images": [
