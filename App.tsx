@@ -352,28 +352,28 @@ const App: React.FC = () => {
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-center pt-20 gap-12 md:gap-24">
           <div className="flex-1">
-            <p className="mono text-[#64ffda] mb-5 tracking-wide reveal text-sm md:text-base">Hi, my name is</p>
-            <h1 className="text-4xl md:text-7xl font-bold text-[#ccd6f6] mb-4 reveal [animation-delay:0.1s] leading-tight">
+            <p className="mono text-teal-600 mb-5 tracking-wide reveal text-sm md:text-base">Hi, my name is</p>
+            <h1 className="text-4xl md:text-7xl font-bold text-gray-800 mb-4 reveal [animation-delay:0.1s] leading-tight">
               {CV_DATA.name}.
             </h1>
-            <h2 className="text-2xl md:text-5xl font-bold text-[#8892b0] mb-8 reveal [animation-delay:0.2s] leading-tight">
+            <h2 className="text-2xl md:text-5xl font-bold text-gray-600 mb-8 reveal [animation-delay:0.2s] leading-tight">
               {HERO_SUBTITLE}
             </h2>
-            <p className="text-[#8892b0] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
+            <p className="text-gray-600 max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
               <HighlightText text={CV_DATA.heroBio} />
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#projects" 
                 onClick={(e) => scrollToSection(e, 'projects')} 
-                className="px-8 py-4 border border-[#64ffda] text-[#64ffda] mono text-sm rounded hover:bg-[#64ffda]/10 transition-colors reveal [animation-delay:0.4s]"
+                className="px-8 py-4 border border-teal-600 text-teal-600 mono text-sm rounded hover:bg-teal-600/10 transition-colors reveal [animation-delay:0.4s]"
               >
                 Check Out My Projects
               </a>
               <a 
                 href="#contact" 
                 onClick={(e) => scrollToSection(e, 'contact')} 
-                className="px-8 py-4 text-[#8892b0] mono text-sm rounded hover:text-[#64ffda] transition-colors reveal [animation-delay:0.45s]"
+                className="px-8 py-4 text-gray-600 mono text-sm rounded hover:text-teal-600 transition-colors reveal [animation-delay:0.45s]"
               >
                 Get In Touch
               </a>
