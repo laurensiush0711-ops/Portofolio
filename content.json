@@ -146,6 +146,10 @@
       "metricLabel": "Dataset Size",
       "metricValue": 65751,
       "link": "https://github.com/Parad5050/Steam-Market-Analysis",
+      "links": [
+        { "label": "Final Deck", "url": "https://docs.google.com/presentation/d/1EF5Q3sxl-y7Pea0CC7CUX1gK9Pcd1FEr1pRizsr6gzk/edit?usp=sharing" },
+        { "label": "Tableau Dashboard", "url": "https://public.tableau.com/views/FSDA_OCT25_Laurensius_Haryo_Final_Project2/SteamMarketAnalysis2021-2025?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" }
+      ],
       "images": [
         "/Portofolio/images/Screenshot 2026-03-11 153237.png",
         "/Portofolio/images/Screenshot 2026-03-11 153315.png",

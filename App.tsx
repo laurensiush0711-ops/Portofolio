@@ -666,6 +666,24 @@ const App: React.FC = () => {
               </div>
               <h2 id="project-modal-title" className="text-3xl md:text-5xl font-bold text-[#ccd6f6] mb-2">{selectedProject.title}</h2>
               <p className="mono text-[#8892b0] text-sm md:text-base">{selectedProject.period}</p>
+              
+              {/* Additional Links */}
+              {selectedProject.links && selectedProject.links.length > 0 && (
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {selectedProject.links.map((link, idx) => (
+                    <a 
+                      key={idx}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#233554]/50 px-3 py-2 rounded hover:bg-[#233554] transition-colors"
+                    >
+                      <i className="fas fa-link text-[10px]"></i>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
             {selectedProject.images && selectedProject.images.length > 0 && (

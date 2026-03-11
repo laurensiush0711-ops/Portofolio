@@ -33,6 +33,7 @@ export interface Project {
   achievements?: string[];
   tags: string[];
   link?: string;
+  links?: { label: string; url: string }[];
   image?: string;
   images?: string[];
   metricLabel: string;
