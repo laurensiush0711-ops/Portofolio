@@ -195,6 +195,9 @@
       "metricLabel": "Bugs Documented",
       "metricValue": 120,
       "link": "https://github.com/Parad5050/Red-Covenant",
+      "images": [
+        "/images/Screenshot 2026-03-11 170359.png"
+      ],
       "note": "Reduced investigation time by 30% through structured bug categorization."
     }
   ]
