@@ -645,6 +645,7 @@ const App: React.FC = () => {
 
             {selectedProject.image && (
               <div className="mb-8">
+                <p className="mono text-[#64ffda] text-xs tracking-widest uppercase mb-3">Project Preview</p>
                 <img 
                   src={selectedProject.image} 
                   alt={`${selectedProject.title} preview`}
