@@ -643,6 +643,16 @@ const App: React.FC = () => {
               <p className="mono text-[#8892b0] text-sm md:text-base">{selectedProject.period}</p>
             </div>
 
+            {selectedProject.image && (
+              <div className="mb-8">
+                <img 
+                  src={selectedProject.image} 
+                  alt={`${selectedProject.title} preview`}
+                  className="w-full h-48 object-cover rounded-lg border border-[#233554]"
+                />
+              </div>
+            )}
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2 space-y-10">
                 {selectedProject.summary && (
