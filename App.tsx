@@ -52,6 +52,21 @@ const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const goToPrevImage = useCallback(() => {
+    if (selectedProject?.images) {
+      setLightboxIndex((prev) => (prev === 0 ? selectedProject.images!.length - 1 : prev - 1));
+      setLightboxImage(selectedProject.images[lightboxIndex === 0 ? selectedProject.images.length - 1 : lightboxIndex - 1]);
+    }
+  }, [selectedProject, lightboxIndex]);
+
+  const goToNextImage = useCallback(() => {
+    if (selectedProject?.images) {
+      setLightboxIndex((prev) => (prev === selectedProject.images!.length - 1 ? 0 : prev + 1));
+      setLightboxImage(selectedProject.images[lightboxIndex === selectedProject.images.length - 1 ? 0 : lightboxIndex + 1]);
+    }
+  }, [selectedProject, lightboxIndex]);
 
   // Memoize derived values
   const waNumber = CV_DATA.phone.replace(/[^0-9]/g, '');
@@ -119,17 +134,26 @@ const App: React.FC = () => {
   // Close modal on Escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && lightboxImage) {
+        setLightboxImage(null);
+      }
       if (e.key === 'Escape' && selectedProject) {
         setSelectedProject(null);
       }
       if (e.key === 'Escape' && isMenuOpen) {
         setIsMenuOpen(false);
       }
+      if (e.key === 'ArrowLeft' && lightboxImage) {
+        goToPrevImage();
+      }
+      if (e.key === 'ArrowRight' && lightboxImage) {
+        goToNextImage();
+      }
     };
     
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
-  }, [selectedProject, isMenuOpen]);
+  }, [selectedProject, isMenuOpen, lightboxImage, goToPrevImage, goToNextImage]);
 
   // Nav link class generator
   const navLinkClass = (id: string) => `
@@ -651,7 +675,7 @@ const App: React.FC = () => {
                   {selectedProject.images.map((img, idx) => (
                     <div 
                       key={idx}
-                      onClick={() => setLightboxImage(img)}
+                      onClick={() => { setLightboxImage(img); setLightboxIndex(idx); }}
                       className="group relative overflow-hidden rounded-lg border border-[#233554] cursor-pointer hover:border-[#64ffda] transition-all duration-300"
                     >
                       <img 
@@ -760,7 +784,7 @@ const App: React.FC = () => {
       )}
 
       {/* Lightbox */}
-      {lightboxImage && (
+      {lightboxImage && selectedProject?.images && (
         <div 
           className="fixed inset-0 z-[200] flex items-center justify-center p-6"
           onClick={() => setLightboxImage(null)}
@@ -772,12 +796,40 @@ const App: React.FC = () => {
           >
             <i className="fas fa-times text-xl"></i>
           </button>
+          
+          {/* Previous button */}
+          {selectedProject.images.length > 1 && (
+            <button 
+              onClick={(e) => { e.stopPropagation(); goToPrevImage(); }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8892b0] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#233554] transition-all"
+              aria-label="Previous image"
+            >
+              <i className="fas fa-chevron-left"></i>
+            </button>
+          )}
+          
+          {/* Next button */}
+          {selectedProject.images.length > 1 && (
+            <button 
+              onClick={(e) => { e.stopPropagation(); goToNextImage(); }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8892b0] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#233554] transition-all"
+              aria-label="Next image"
+            >
+              <i className="fas fa-chevron-right"></i>
+            </button>
+          )}
+          
           <img 
             src={lightboxImage} 
             alt="Full size preview"
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl z-10"
             onClick={(e) => e.stopPropagation()}
           />
+          
+          {/* Image counter */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 mono text-xs text-[#8892b0] bg-[#112240]/80 px-4 py-2 rounded-full">
+            {lightboxIndex + 1} / {selectedProject.images.length}
+          </div>
         </div>
       )}
 
