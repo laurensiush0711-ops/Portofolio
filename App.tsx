@@ -38,7 +38,7 @@ const HighlightText: React.FC<{ text: string; className?: string }> = ({ text, c
     <span className={className}>
       {parts.map((part, i) => {
         if (part.match(regex)) {
-          return <span key={i} className="text-[#64ffda] font-medium">{part}</span>;
+          return <span key={i} className="text-teal-600 font-medium">{part}</span>;
         }
         return <span key={i}>{part}</span>;
       })}
@@ -273,7 +273,7 @@ const App: React.FC = () => {
                   className={navLinkClass(item.id)}
                   aria-current={activeSection === item.id ? 'page' : undefined}
                 >
-                  <span className="text-[#64ffda] text-[11px]">{item.number}</span> {item.label}
+                  <span className="text-teal-600 text-[11px]">{item.number}</span> {item.label}
                 </a>
               </li>
             ))}
@@ -383,14 +383,14 @@ const App: React.FC = () => {
           {/* Hero Image */}
           <div className="flex-shrink-0 reveal [animation-delay:0.5s] relative">
             <div className="relative group w-[280px] h-[340px] md:w-[360px] md:h-[440px]">
-              <div className="absolute -top-6 -right-6 w-28 h-28 border-t-2 border-r-2 border-[#64ffda]/20 z-0 group-hover:-top-2 group-hover:-right-2 transition-all duration-700"></div>
-              <div className="absolute -bottom-6 -left-6 w-28 h-28 border-b-2 border-l-2 border-[#64ffda]/20 z-0 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-700"></div>
-              <div className="absolute top-4 left-4 w-full h-full border-2 border-[#64ffda] rounded-lg group-hover:top-2 group-hover:left-2 transition-all duration-300"></div>
+              <div className="absolute -top-6 -right-6 w-28 h-28 border-t-2 border-r-2 border-teal-600/20 z-0 group-hover:-top-2 group-hover:-right-2 transition-all duration-700"></div>
+              <div className="absolute -bottom-6 -left-6 w-28 h-28 border-b-2 border-l-2 border-teal-600/20 z-0 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-700"></div>
+              <div className="absolute top-4 left-4 w-full h-full border-2 border-teal-600 rounded-lg group-hover:top-2 group-hover:left-2 transition-all duration-300"></div>
               
-              <div className="relative w-full h-full bg-[#112240] rounded-lg overflow-hidden shadow-2xl border border-[#233554] group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300 z-10 flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#64ffda]/10 to-transparent h-1/2 w-full opacity-0 group-hover:opacity-100 animate-[bounce_3s_infinite] pointer-events-none z-30"></div>
-                <div className="absolute inset-0 bg-[#64ffda]/10 mix-blend-color group-hover:bg-transparent transition-all duration-500 z-20 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-[#0a192f]/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none z-20"></div>
+              <div className="relative w-full h-full bg-gray-50 rounded-lg overflow-hidden shadow-2xl border border-gray-200 group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300 z-10 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-b from-teal-600/10 to-transparent h-1/2 w-full opacity-0 group-hover:opacity-100 animate-[bounce_3s_infinite] pointer-events-none z-30"></div>
+                <div className="absolute inset-0 bg-teal-600/10 mix-blend-color group-hover:bg-transparent transition-all duration-500 z-20 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-white/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none z-20"></div>
                 
                 <img 
                   src={CV_DATA.profileImage} 
@@ -403,13 +403,13 @@ const App: React.FC = () => {
                   }}
                 />
                 
-                <div className="profile-fallback hidden flex flex-col items-center justify-center w-full h-full gap-4 text-[#64ffda]/30 text-center p-6 bg-[#112240]">
+                <div className="profile-fallback hidden flex flex-col items-center justify-center w-full h-full gap-4 text-teal-600/30 text-center p-6 bg-gray-50">
                   <i className="fas fa-database text-8xl mb-4"></i>
                   <span className="mono text-[10px] uppercase tracking-[0.2em] max-w-[150px]">Profile Image Not Found</span>
                 </div>
 
-                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#64ffda] z-40 m-2 opacity-50"></div>
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#64ffda] z-40 m-2 opacity-50"></div>
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-teal-600 z-40 m-2 opacity-50"></div>
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-teal-600 z-40 m-2 opacity-50"></div>
               </div>
 
             </div>
@@ -419,13 +419,13 @@ const App: React.FC = () => {
         {/* About Section */}
         <section id="about" className="py-24 scroll-mt-20">
           <div className="flex items-center gap-4 mb-10">
-            <h2 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold whitespace-nowrap">
-              <span className="mono text-[#64ffda] text-lg md:text-xl mr-2">01.</span> About
+            <h2 className="text-gray-800 text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="mono text-teal-600 text-lg md:text-xl mr-2">01.</span> About
             </h2>
-            <div className="h-[1px] bg-[#233554] w-full max-w-[300px]" />
+            <div className="h-[1px] bg-gray-200 w-full max-w-[300px]" />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-            <div className="lg:col-span-3 space-y-4 text-[#8892b0] text-sm md:text-[17px] leading-loose">
+            <div className="lg:col-span-3 space-y-4 text-gray-600 text-sm md:text-[17px] leading-loose">
               <HighlightText text={CV_DATA.bio} />
             </div>
             <div className="lg:col-span-2 w-full">
@@ -437,12 +437,12 @@ const App: React.FC = () => {
         {/* Skills Section */}
         <section id="skills" className="py-24 scroll-mt-20">
           <div className="flex items-center gap-4 mb-10">
-            <h2 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold whitespace-nowrap">
-              <span className="mono text-[#64ffda] text-lg md:text-xl mr-2">02.</span> Skills
+            <h2 className="text-gray-800 text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="mono text-teal-600 text-lg md:text-xl mr-2">02.</span> Skills
             </h2>
-            <div className="h-[1px] bg-[#233554] w-full" />
+            <div className="h-[1px] bg-gray-200 w-full" />
           </div>
-          <div className="border border-[#64ffda]/30 rounded-lg p-6">
+          <div className="border border-teal-600/30 rounded-lg p-6 bg-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {renderSkillCard('Data')}
               {renderSkillCard('QA')}
@@ -455,16 +455,16 @@ const App: React.FC = () => {
         {/* Experience Section */}
         <section id="experience" className="py-24 scroll-mt-20 max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-10">
-            <h2 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold whitespace-nowrap">
-              <span className="mono text-[#64ffda] text-lg md:text-xl mr-2">03.</span> Experience
+            <h2 className="text-gray-800 text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="mono text-teal-600 text-lg md:text-xl mr-2">03.</span> Experience
             </h2>
-            <div className="h-[1px] bg-[#233554] w-full" />
+            <div className="h-[1px] bg-gray-200 w-full" />
           </div>
           
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 min-h-[300px]">
             {/* Company Tabs */}
             <div 
-              className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b-2 md:border-b-0 md:border-l-2 border-[#233554] scrollbar-hide shrink-0"
+              className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b-2 md:border-b-0 md:border-l-2 border-gray-200 scrollbar-hide shrink-0"
               role="tablist"
               aria-label="Work experience companies"
             >
@@ -472,7 +472,7 @@ const App: React.FC = () => {
                 <button 
                   key={exp.id}
                   onClick={() => setActiveExperienceTab(idx)} 
-                  className={`px-5 py-3 text-left mono text-[12px] md:text-[13px] whitespace-nowrap transition-all border-b-2 md:border-b-0 md:border-l-2 -mb-[2px] md:-mb-0 md:-ml-[2px] ${activeExperienceTab === idx ? 'border-[#64ffda] text-[#64ffda] bg-[#112240]' : 'border-transparent text-[#8892b0] hover:text-[#64ffda] hover:bg-[#112240]'}`}
+                  className={`px-5 py-3 text-left mono text-[12px] md:text-[13px] whitespace-nowrap transition-all border-b-2 md:border-b-0 md:border-l-2 -mb-[2px] md:-mb-0 md:-ml-[2px] ${activeExperienceTab === idx ? 'border-teal-600 text-teal-600 bg-gray-50' : 'border-transparent text-gray-600 hover:text-teal-600 hover:bg-gray-50'}`}
                   role="tab"
                   aria-selected={activeExperienceTab === idx}
                   aria-controls={`experience-panel-${exp.id}`}
@@ -490,16 +490,16 @@ const App: React.FC = () => {
               id={`experience-panel-${EXPERIENCES[activeExperienceTab].id}`}
               aria-labelledby={`experience-tab-${EXPERIENCES[activeExperienceTab].id}`}
             >
-              <h3 className="text-lg md:text-xl font-bold text-[#ccd6f6]">
+              <h3 className="text-lg md:text-xl font-bold text-gray-800">
                 {EXPERIENCES[activeExperienceTab].role} 
-                <span className="text-[#64ffda]">@ {EXPERIENCES[activeExperienceTab].company}</span>
+                <span className="text-teal-600">@ {EXPERIENCES[activeExperienceTab].company}</span>
               </h3>
-              <p className="mono text-[12px] text-[#8892b0] mt-1 mb-2">{EXPERIENCES[activeExperienceTab].period}</p>
+              <p className="mono text-[12px] text-gray-500 mt-1 mb-2">{EXPERIENCES[activeExperienceTab].period}</p>
               
               <ul className="space-y-5 mt-6">
                 {EXPERIENCES[activeExperienceTab].description.map((desc, i) => (
-                  <li key={i} className="flex gap-3 text-[#8892b0] text-sm md:text-[15px] leading-relaxed">
-                    <span className="text-[#64ffda] text-xs mt-1 shrink-0">▹</span>
+                  <li key={i} className="flex gap-3 text-gray-600 text-sm md:text-[15px] leading-relaxed">
+                    <span className="text-teal-600 text-xs mt-1 shrink-0">▹</span>
                     <span><HighlightText text={desc} /></span>
                   </li>
                 ))}
@@ -511,18 +511,18 @@ const App: React.FC = () => {
         {/* Projects Section */}
         <section id="projects" className="py-24 scroll-mt-20">
           <div className="flex items-center gap-4 mb-16">
-            <h2 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold whitespace-nowrap">
-              <span className="mono text-[#64ffda] text-lg md:text-xl mr-2">04.</span> Projects
+            <h2 className="text-gray-800 text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="mono text-teal-600 text-lg md:text-xl mr-2">04.</span> Projects
             </h2>
-            <div className="h-[1px] bg-[#233554] w-full" />
+            <div className="h-[1px] bg-gray-200 w-full" />
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PROJECTS.map((project) => (
               <div 
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group bg-[#112240] rounded-lg p-8 border border-[#233554] hover:border-[#64ffda]/50 hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="group bg-white rounded-lg p-8 border border-gray-200 hover:border-teal-600/50 hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col justify-between shadow-sm"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => e.key === 'Enter' && setSelectedProject(project)}
@@ -530,15 +530,15 @@ const App: React.FC = () => {
               >
                 <div>
                   <div className="flex justify-between items-start mb-6">
-                    <i className="fas fa-folder text-[#64ffda] text-4xl" aria-hidden="true"></i>
-                    <div className="flex gap-4 text-[#ccd6f6] text-xl">
+                    <i className="fas fa-folder text-teal-600 text-4xl" aria-hidden="true"></i>
+                    <div className="flex gap-4 text-gray-700 text-xl">
                       {project.link && (
                         <a 
                           href={project.link} 
                           target="_blank" 
                           rel="noopener noreferrer" 
                           onClick={(e) => e.stopPropagation()}
-                          className="hover:text-[#64ffda]"
+                          className="hover:text-teal-600"
                           aria-label={`View ${project.title} external link`}
                         >
                           <i className="fas fa-external-link-alt"></i>
@@ -548,18 +548,18 @@ const App: React.FC = () => {
                   </div>
                   
                   <div className="mb-2 flex items-center gap-3">
-                    <h3 className="text-xl font-bold text-[#ccd6f6] group-hover:text-[#64ffda]">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-teal-600">{project.title}</h3>
                   </div>
                   
-                  <p className="mono text-[10px] text-[#64ffda] mb-3 uppercase tracking-wider">{project.period}</p>
-                  <p className="text-[#8892b0] text-sm leading-relaxed mb-6">
+                  <p className="mono text-[10px] text-teal-600 mb-3 uppercase tracking-wider">{project.period}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     <HighlightText text={project.description} />
                   </p>
                 </div>
                 
-                <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto pt-4 border-t border-[#233554]/50">
+                <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto pt-4 border-t border-gray-100">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="mono text-[10px] text-[#8892b0]">{tag}</span>
+                    <span key={tag} className="mono text-[10px] text-gray-500">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -570,24 +570,24 @@ const App: React.FC = () => {
         {/* Education Section */}
         <section id="education" className="py-24 scroll-mt-20 max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-10">
-            <h2 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold whitespace-nowrap">
-              <span className="mono text-[#64ffda] text-lg md:text-xl mr-2">05.</span> Education
+            <h2 className="text-gray-800 text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="mono text-teal-600 text-lg md:text-xl mr-2">05.</span> Education
             </h2>
-            <div className="h-[1px] bg-[#233554] w-full" />
+            <div className="h-[1px] bg-gray-200 w-full" />
           </div>
           
           <div className="space-y-12">
             {EDUCATION.map((edu) => (
-              <div key={edu.id} className="relative pl-8 border-l-2 border-[#233554]">
-                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-[#0a192f] border-2 border-[#64ffda]"></div>
-                <h3 className="text-xl font-bold text-[#ccd6f6]">{edu.institution}</h3>
-                <p className="text-[#64ffda] mono text-sm mt-1">{edu.degree}</p>
-                <p className="mono text-xs text-[#8892b0] mt-1">{edu.period} | {edu.location}</p>
+              <div key={edu.id} className="relative pl-8 border-l-2 border-gray-200">
+                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-teal-600"></div>
+                <h3 className="text-xl font-bold text-gray-800">{edu.institution}</h3>
+                <p className="text-teal-600 mono text-sm mt-1">{edu.degree}</p>
+                <p className="mono text-xs text-gray-500 mt-1">{edu.period} | {edu.location}</p>
                 
                 <ul className="mt-4 space-y-3">
                   {edu.highlights?.map((highlight, i) => (
-                    <li key={i} className="flex items-center gap-2 text-[#8892b0] text-sm leading-relaxed">
-                      <span className="text-[#64ffda] text-[10px]">▹</span>
+                    <li key={i} className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed">
+                      <span className="text-teal-600 text-[10px]">▹</span>
                       <span><HighlightText text={highlight} /></span>
                     </li>
                   ))}
@@ -599,16 +599,16 @@ const App: React.FC = () => {
 
         {/* Contact Section */}
         <section id="contact" className="py-32 text-center max-w-2xl mx-auto">
-          <p className="mono text-[#64ffda] mb-4 text-sm tracking-widest uppercase">06. Contact</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#ccd6f6] mb-6">{CONTACT_TITLE}</h2>
-          <p className="text-[#8892b0] mb-12">
+          <p className="mono text-teal-600 mb-4 text-sm tracking-widest uppercase">06. Contact</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">{CONTACT_TITLE}</h2>
+          <p className="text-gray-600 mb-12">
             {CONTACT_DESCRIPTION}
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <a 
               href={mailtoLink} 
-              className="px-12 py-5 border border-[#64ffda] text-[#64ffda] mono text-sm rounded hover:bg-[#64ffda]/10 transition-colors flex items-center justify-center gap-3"
+              className="px-12 py-5 border border-teal-600 text-teal-600 mono text-sm rounded hover:bg-teal-600/10 transition-colors flex items-center justify-center gap-3"
             >
               <i className="fas fa-envelope"></i> Email Me
             </a>
@@ -616,9 +616,9 @@ const App: React.FC = () => {
               href={`https://wa.me/${waNumber}`} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-12 py-5 bg-[#112240] border border-[#233554] text-[#ccd6f6] mono text-sm rounded hover:border-[#64ffda] hover:text-[#64ffda] transition-all flex items-center justify-center gap-3"
+              className="px-12 py-5 bg-gray-50 border border-gray-200 text-gray-700 mono text-sm rounded hover:border-teal-600 hover:text-teal-600 transition-all flex items-center justify-center gap-3"
             >
-              <i className="fab fa-whatsapp text-[#64ffda]"></i> WhatsApp
+              <i className="fab fa-whatsapp text-teal-600"></i> WhatsApp
             </a>
           </div>
         </section>
@@ -636,15 +636,15 @@ const App: React.FC = () => {
           {/* Backdrop */}
           <div 
             onClick={() => setSelectedProject(null)} 
-            className="absolute inset-0 bg-[#020c1b]/90 backdrop-blur-md"
+            className="absolute inset-0 bg-gray-900/50 backdrop-blur-md"
             style={{ zIndex: Z_INDEX.MODAL_OVERLAY }}
           />
           
           {/* Modal Content */}
-          <div className="relative bg-[#112240] w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl border border-[#233554] p-8 md:p-12 reveal scrollbar-hide" style={{ zIndex: Z_INDEX.PROJECT_CONTENT }}>
+          <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl border border-gray-200 p-8 md:p-12 reveal scrollbar-hide" style={{ zIndex: Z_INDEX.PROJECT_CONTENT }}>
             <button 
               onClick={() => setSelectedProject(null)} 
-              className="absolute top-6 right-6 text-[#8892b0] hover:text-[#64ffda] p-2 z-10"
+              className="absolute top-6 right-6 text-gray-500 hover:text-teal-600 p-2 z-10"
               aria-label="Close project details"
             >
               <i className="fas fa-times text-xl"></i>
@@ -652,20 +652,20 @@ const App: React.FC = () => {
             
             <div className="mb-8">
               <div className="flex flex-wrap items-center gap-4 mb-4">
-                <p className="mono text-[#64ffda] text-xs tracking-widest uppercase bg-[#64ffda]/10 px-3 py-1 rounded">Project Case Study</p>
+                <p className="mono text-teal-600 text-xs tracking-widest uppercase bg-teal-600/10 px-3 py-1 rounded">Project Case Study</p>
                 {selectedProject.link && (
                   <a 
                     href={selectedProject.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2"
+                    className="mono text-teal-600 text-xs hover:underline flex items-center gap-2"
                   >
                      • View Project <i className="fas fa-external-link-alt text-[10px]"></i>
                   </a>
                 )}
               </div>
-              <h2 id="project-modal-title" className="text-3xl md:text-5xl font-bold text-[#ccd6f6] mb-2">{selectedProject.title}</h2>
-              <p className="mono text-[#8892b0] text-sm md:text-base">{selectedProject.period}</p>
+              <h2 id="project-modal-title" className="text-3xl md:text-5xl font-bold text-gray-800 mb-2">{selectedProject.title}</h2>
+              <p className="mono text-gray-500 text-sm md:text-base">{selectedProject.period}</p>
               
               {/* Additional Links */}
               {selectedProject.links && selectedProject.links.length > 0 && (
@@ -676,7 +676,7 @@ const App: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#233554]/50 px-3 py-2 rounded hover:bg-[#233554] transition-colors"
+                      className="mono text-teal-600 text-xs hover:underline flex items-center gap-2 bg-gray-100 px-3 py-2 rounded hover:bg-gray-200 transition-colors"
                     >
                       <i className="fas fa-link text-[10px]"></i>
                       {link.label}
@@ -688,21 +688,21 @@ const App: React.FC = () => {
 
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="mb-8">
-                <p className="mono text-[#64ffda] text-xs tracking-widest uppercase mb-4">Project Preview</p>
+                <p className="mono text-teal-600 text-xs tracking-widest uppercase mb-4">Project Preview</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {selectedProject.images.map((img, idx) => (
                     <div 
                       key={idx}
                       onClick={() => { setLightboxImage(img); setLightboxIndex(idx); }}
-                      className="group relative overflow-hidden rounded-lg border border-[#233554] cursor-pointer hover:border-[#64ffda] transition-all duration-300"
+                      className="group relative overflow-hidden rounded-lg border border-gray-200 cursor-pointer hover:border-teal-600 transition-all duration-300"
                     >
                       <img 
                         src={img} 
                         alt={`${selectedProject.title} preview ${idx + 1}`}
                         className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-[#020c1b]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span className="text-[#64ffda] text-xs mono uppercase tracking-widest">View</span>
+                      <div className="absolute inset-0 bg-gray-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-teal-600 text-xs mono uppercase tracking-widest">View</span>
                       </div>
                     </div>
                   ))}
@@ -714,10 +714,10 @@ const App: React.FC = () => {
               <div className="lg:col-span-2 space-y-10">
                 {selectedProject.summary && (
                   <div>
-                    <h4 className="text-[#ccd6f6] font-bold text-lg mb-4 flex items-center gap-2">
-                      <span className="w-1 h-6 bg-[#64ffda] block"></span> Project Summary
+                    <h4 className="text-gray-800 font-bold text-lg mb-4 flex items-center gap-2">
+                      <span className="w-1 h-6 bg-teal-600 block"></span> Project Summary
                     </h4>
-                    <p className="text-[#8892b0] leading-loose text-[15px]">
+                    <p className="text-gray-600 leading-loose text-[15px]">
                       <HighlightText text={selectedProject.summary} />
                     </p>
                   </div>
@@ -726,16 +726,16 @@ const App: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {selectedProject.goals && (
                     <div>
-                      <h4 className="text-[#ccd6f6] font-bold text-sm mono uppercase tracking-wider mb-3 text-[#64ffda]">Goals</h4>
-                      <p className="text-[#8892b0] leading-relaxed text-sm">
+                      <h4 className="text-gray-800 font-bold text-sm mono uppercase tracking-wider mb-3 text-teal-600">Goals</h4>
+                      <p className="text-gray-600 leading-relaxed text-sm">
                         <HighlightText text={selectedProject.goals} />
                       </p>
                     </div>
                   )}
                   {selectedProject.process && (
                     <div>
-                      <h4 className="text-[#ccd6f6] font-bold text-sm mono uppercase tracking-wider mb-3 text-[#64ffda]">Process</h4>
-                      <p className="text-[#8892b0] leading-relaxed text-sm">
+                      <h4 className="text-gray-800 font-bold text-sm mono uppercase tracking-wider mb-3 text-teal-600">Process</h4>
+                      <p className="text-gray-600 leading-relaxed text-sm">
                         <HighlightText text={selectedProject.process} />
                       </p>
                     </div>
@@ -743,9 +743,9 @@ const App: React.FC = () => {
                 </div>
 
                 {selectedProject.output && (
-                  <div className="bg-[#0a192f] p-6 rounded-lg border border-[#233554]">
-                    <h4 className="text-[#ccd6f6] font-bold text-sm mono uppercase tracking-wider mb-4 text-[#64ffda]">Output</h4>
-                    <p className="text-[#8892b0] leading-relaxed text-sm">
+                  <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h4 className="text-gray-800 font-bold text-sm mono uppercase tracking-wider mb-4 text-teal-600">Output</h4>
+                    <p className="text-gray-600 leading-relaxed text-sm">
                       <HighlightText text={selectedProject.output} />
                     </p>
                   </div>
@@ -754,12 +754,12 @@ const App: React.FC = () => {
 
               <div className="space-y-8">
                  {selectedProject.achievements && (
-                   <div className="bg-[#1b2b48] p-6 rounded-lg border-l-4 border-[#64ffda]">
-                     <h4 className="text-[#ccd6f6] font-bold mb-4 text-sm mono uppercase tracking-wider">Scope of Work / Achievements</h4>
+                   <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-teal-600">
+                     <h4 className="text-gray-800 font-bold mb-4 text-sm mono uppercase tracking-wider">Scope of Work / Achievements</h4>
                      <ul className="space-y-4">
                         {selectedProject.achievements.map((item, i) => (
-                          <li key={i} className="flex gap-3 text-[#8892b0] text-xs leading-relaxed">
-                            <span className="text-[#64ffda] shrink-0 mt-0.5">▹</span>
+                          <li key={i} className="flex gap-3 text-gray-600 text-xs leading-relaxed">
+                            <span className="text-teal-600 shrink-0 mt-0.5">▹</span>
                             <span><HighlightText text={item} /></span>
                           </li>
                         ))}
@@ -767,18 +767,18 @@ const App: React.FC = () => {
                    </div>
                  )}
 
-                 <div className="bg-[#0a192f] p-6 rounded-lg border border-[#233554]">
+                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                     <div className="mb-6">
-                      <div className="text-[#64ffda] text-3xl font-bold mono">
+                      <div className="text-teal-600 text-3xl font-bold mono">
                         {selectedProject.metricValue.toLocaleString()}{selectedProject.metricLabel.includes('Rating') ? '%' : ''}
                       </div>
-                      <div className="mono text-[10px] text-[#8892b0] uppercase tracking-widest">{selectedProject.metricLabel}</div>
+                      <div className="mono text-[10px] text-gray-500 uppercase tracking-widest">{selectedProject.metricLabel}</div>
                     </div>
                     <div>
-                      <h4 className="text-[#ccd6f6] font-bold text-xs mono uppercase tracking-wider mb-3">Technologies</h4>
+                      <h4 className="text-gray-800 font-bold text-xs mono uppercase tracking-wider mb-3">Technologies</h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedProject.tags.map((tag) => (
-                          <span key={tag} className="px-2 py-1 bg-[#233554] rounded mono text-[9px] text-[#64ffda]">{tag}</span>
+                          <span key={tag} className="px-2 py-1 bg-gray-200 rounded mono text-[9px] text-teal-600">{tag}</span>
                         ))}
                       </div>
                     </div>
@@ -786,15 +786,15 @@ const App: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-12 pt-8 border-t border-[#233554] flex justify-between items-center">
+            <div className="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
                <button 
                  onClick={() => setSelectedProject(null)} 
-                 className="text-[#8892b0] hover:text-[#64ffda] mono text-xs flex items-center gap-2 transition-colors"
+                 className="text-gray-500 hover:text-teal-600 mono text-xs flex items-center gap-2 transition-colors"
                >
                   <i className="fas fa-arrow-left"></i> Back to Projects
                </button>
                {selectedProject.note && (
-                 <p className="text-[11px] italic text-[#8892b0] max-w-[200px] text-right">{selectedProject.note}</p>
+                 <p className="text-[11px] italic text-gray-500 max-w-[200px] text-right">{selectedProject.note}</p>
                )}
             </div>
           </div>
@@ -807,9 +807,9 @@ const App: React.FC = () => {
           className="fixed inset-0 z-[200] flex items-center justify-center p-6"
           onClick={() => setLightboxImage(null)}
         >
-          <div className="absolute inset-0 bg-[#020c1b]/95 backdrop-blur-md" />
+          <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md" />
           <button 
-            className="absolute top-6 right-6 text-[#8892b0] hover:text-[#64ffda] p-2 z-10"
+            className="absolute top-6 right-6 text-gray-400 hover:text-teal-600 p-2 z-10"
             aria-label="Close lightbox"
           >
             <i className="fas fa-times text-xl"></i>
@@ -819,7 +819,7 @@ const App: React.FC = () => {
           {selectedProject.images.length > 1 && (
             <button 
               onClick={(e) => { e.stopPropagation(); goToPrevImage(); }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8892b0] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#233554] transition-all"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-teal-600 p-3 z-10 bg-white/80 rounded-full hover:bg-white transition-all"
               aria-label="Previous image"
             >
               <i className="fas fa-chevron-left"></i>
@@ -830,7 +830,7 @@ const App: React.FC = () => {
           {selectedProject.images.length > 1 && (
             <button 
               onClick={(e) => { e.stopPropagation(); goToNextImage(); }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8892b0] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#233554] transition-all"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-teal-600 p-3 z-10 bg-white/80 rounded-full hover:bg-white transition-all"
               aria-label="Next image"
             >
               <i className="fas fa-chevron-right"></i>
@@ -845,13 +845,13 @@ const App: React.FC = () => {
           />
           
           {/* Image counter */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 mono text-xs text-[#8892b0] bg-[#112240]/80 px-4 py-2 rounded-full">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 mono text-xs text-gray-400 bg-white/80 px-4 py-2 rounded-full">
             {lightboxIndex + 1} / {selectedProject.images.length}
           </div>
         </div>
       )}
 
-      <footer className="py-12 text-center opacity-50 mono text-[10px]">
+      <footer className="py-12 text-center opacity-50 mono text-[10px] text-gray-500">
         Designed & Built by {CV_DATA.name} &copy; {new Date().getFullYear()}
       </footer>
     </div>
