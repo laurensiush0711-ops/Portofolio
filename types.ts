@@ -34,6 +34,7 @@ export interface Project {
   tags: string[];
   link?: string;
   image?: string;
+  images?: string[];
   metricLabel: string;
   metricValue: number;
   note?: string;

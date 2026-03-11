@@ -643,14 +643,19 @@ const App: React.FC = () => {
               <p className="mono text-[#8892b0] text-sm md:text-base">{selectedProject.period}</p>
             </div>
 
-            {selectedProject.image && (
+            {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="mb-8">
                 <p className="mono text-[#64ffda] text-xs tracking-widest uppercase mb-3">Project Preview</p>
-                <img 
-                  src={selectedProject.image} 
-                  alt={`${selectedProject.title} preview`}
-                  className="w-full h-48 object-cover rounded-lg border border-[#233554]"
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {selectedProject.images.map((img, idx) => (
+                    <img 
+                      key={idx}
+                      src={img} 
+                      alt={`${selectedProject.title} preview ${idx + 1}`}
+                      className="w-full h-40 object-cover rounded-lg border border-[#233554]"
+                    />
+                  ))}
+                </div>
               </div>
             )}
 
