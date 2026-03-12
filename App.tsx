@@ -183,7 +183,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`relative min-h-screen bg-[#0a192f] ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
+    <div className={`relative min-h-screen ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
       
       {/* Sidebars (Desktop only) */}
       <div 
@@ -222,7 +222,7 @@ const App: React.FC = () => {
         <div className="sidebar-line"></div>
       </div>
 
-        <div 
+      <div 
         className="fixed bottom-0 right-10 w-10 hidden xl:flex flex-col items-center gap-6 z-50"
         aria-label="Contact information"
       >
@@ -246,7 +246,7 @@ const App: React.FC = () => {
 
       {/* Navigation */}
       <nav 
-        className="fixed top-0 w-full z-[60] px-6 md:px-10 h-20 flex items-center justify-between bg-[#0a192f]/95 backdrop-blur-md shadow-sm"
+        className="fixed top-0 w-full z-[60] px-6 md:px-10 h-20 flex items-center justify-between backdrop-blur-md bg-[#0a192f]/85"
         style={{ zIndex: Z_INDEX.NAVBAR }}
         role="navigation"
         aria-label="Main navigation"
@@ -341,7 +341,7 @@ const App: React.FC = () => {
         {/* Mobile Menu Overlay */}
         <div 
           onClick={() => setIsMenuOpen(false)}
-          className={`fixed inset-0 bg-gray-900/50 backdrop-blur-sm z-[60] transition-opacity duration-300 md:hidden ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`fixed inset-0 bg-[#020c1b]/80 backdrop-blur-sm z-[60] transition-opacity duration-300 md:hidden ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           aria-hidden="true"
         />
       </nav>
@@ -356,10 +356,10 @@ const App: React.FC = () => {
             <h1 className="text-4xl md:text-7xl font-bold text-[#ccd6f6] mb-4 reveal [animation-delay:0.1s] leading-tight">
               {CV_DATA.name}.
             </h1>
-            <h2 className="text-2xl md:text-5xl font-bold text-[#a8b2d1] mb-8 reveal [animation-delay:0.2s] leading-tight">
+            <h2 className="text-2xl md:text-5xl font-bold text-[#8892b0] mb-8 reveal [animation-delay:0.2s] leading-tight">
               {HERO_SUBTITLE}
             </h2>
-            <p className="text-[#a8b2d1] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
+            <p className="text-[#8892b0] max-w-xl leading-relaxed text-base md:text-lg mb-12 reveal [animation-delay:0.3s]">
               <HighlightText text={CV_DATA.heroBio} />
             </p>
             <div className="flex flex-wrap gap-4">
@@ -373,7 +373,7 @@ const App: React.FC = () => {
               <a 
                 href="#contact" 
                 onClick={(e) => scrollToSection(e, 'contact')} 
-                className="px-8 py-4 text-[#a8b2d1] mono text-sm rounded hover:text-[#64ffda] transition-colors reveal [animation-delay:0.45s]"
+                className="px-8 py-4 text-[#8892b0] mono text-sm rounded hover:text-[#64ffda] transition-colors reveal [animation-delay:0.45s]"
               >
                 Get In Touch
               </a>
@@ -425,7 +425,7 @@ const App: React.FC = () => {
             <div className="h-[1px] bg-[#233554] w-full max-w-[300px]" />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-            <div className="lg:col-span-3 space-y-4 text-[#a8b2d1] text-sm md:text-[17px] leading-loose">
+            <div className="lg:col-span-3 space-y-4 text-[#8892b0] text-sm md:text-[17px] leading-loose">
               <HighlightText text={CV_DATA.bio} />
             </div>
             <div className="lg:col-span-2 w-full">
@@ -442,7 +442,7 @@ const App: React.FC = () => {
             </h2>
             <div className="h-[1px] bg-[#233554] w-full" />
           </div>
-          <div className="border border-[#64ffda]/30 rounded-lg p-6 bg-[#112240]">
+          <div className="border border-[#64ffda]/30 rounded-lg p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {renderSkillCard('Data')}
               {renderSkillCard('QA')}
@@ -472,7 +472,7 @@ const App: React.FC = () => {
                 <button 
                   key={exp.id}
                   onClick={() => setActiveExperienceTab(idx)} 
-                  className={`px-5 py-3 text-left mono text-[12px] md:text-[13px] whitespace-nowrap transition-all border-b-2 md:border-b-0 md:border-l-2 -mb-[2px] md:-mb-0 md:-ml-[2px] ${activeExperienceTab === idx ? 'border-[#64ffda] text-[#64ffda] bg-[#112240]' : 'border-transparent text-[#a8b2d1] hover:text-[#64ffda] hover:bg-[#112240]'}`}
+                  className={`px-5 py-3 text-left mono text-[12px] md:text-[13px] whitespace-nowrap transition-all border-b-2 md:border-b-0 md:border-l-2 -mb-[2px] md:-mb-0 md:-ml-[2px] ${activeExperienceTab === idx ? 'border-[#64ffda] text-[#64ffda] bg-[#112240]' : 'border-transparent text-[#8892b0] hover:text-[#64ffda] hover:bg-[#112240]'}`}
                   role="tab"
                   aria-selected={activeExperienceTab === idx}
                   aria-controls={`experience-panel-${exp.id}`}
@@ -494,11 +494,11 @@ const App: React.FC = () => {
                 {EXPERIENCES[activeExperienceTab].role} 
                 <span className="text-[#64ffda]">@ {EXPERIENCES[activeExperienceTab].company}</span>
               </h3>
-              <p className="mono text-[12px] text-[#a8b2d1] mt-1 mb-2">{EXPERIENCES[activeExperienceTab].period}</p>
+              <p className="mono text-[12px] text-[#8892b0] mt-1 mb-2">{EXPERIENCES[activeExperienceTab].period}</p>
               
               <ul className="space-y-5 mt-6">
                 {EXPERIENCES[activeExperienceTab].description.map((desc, i) => (
-                  <li key={i} className="flex gap-3 text-[#a8b2d1] text-sm md:text-[15px] leading-relaxed">
+                  <li key={i} className="flex gap-3 text-[#8892b0] text-sm md:text-[15px] leading-relaxed">
                     <span className="text-[#64ffda] text-xs mt-1 shrink-0">▹</span>
                     <span><HighlightText text={desc} /></span>
                   </li>
@@ -517,12 +517,12 @@ const App: React.FC = () => {
             <div className="h-[1px] bg-[#233554] w-full" />
           </div>
           
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PROJECTS.map((project) => (
               <div 
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group bg-[#112240] rounded-lg p-8 border border-[#233554] hover:border-[#64ffda]/50 hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col justify-between shadow-sm"
+                className="group bg-[#112240] rounded-lg p-8 border border-[#233554] hover:border-[#64ffda]/50 hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col justify-between"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => e.key === 'Enter' && setSelectedProject(project)}
@@ -531,7 +531,7 @@ const App: React.FC = () => {
                 <div>
                   <div className="flex justify-between items-start mb-6">
                     <i className="fas fa-folder text-[#64ffda] text-4xl" aria-hidden="true"></i>
-                    <div className="flex gap-4 text-[#a8b2d1] text-xl">
+                    <div className="flex gap-4 text-[#ccd6f6] text-xl">
                       {project.link && (
                         <a 
                           href={project.link} 
@@ -552,14 +552,14 @@ const App: React.FC = () => {
                   </div>
                   
                   <p className="mono text-[10px] text-[#64ffda] mb-3 uppercase tracking-wider">{project.period}</p>
-                  <p className="text-[#a8b2d1] text-sm leading-relaxed mb-6">
+                  <p className="text-[#8892b0] text-sm leading-relaxed mb-6">
                     <HighlightText text={project.description} />
                   </p>
                 </div>
                 
-                <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto pt-4 border-t border-[#233554]">
+                <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto pt-4 border-t border-[#233554]/50">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="mono text-[10px] text-[#a8b2d1]">{tag}</span>
+                    <span key={tag} className="mono text-[10px] text-[#8892b0]">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -579,14 +579,14 @@ const App: React.FC = () => {
           <div className="space-y-12">
             {EDUCATION.map((edu) => (
               <div key={edu.id} className="relative pl-8 border-l-2 border-[#233554]">
-                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-[#112240] border-2 border-[#64ffda]"></div>
+                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-[#0a192f] border-2 border-[#64ffda]"></div>
                 <h3 className="text-xl font-bold text-[#ccd6f6]">{edu.institution}</h3>
                 <p className="text-[#64ffda] mono text-sm mt-1">{edu.degree}</p>
-                <p className="mono text-xs text-[#a8b2d1] mt-1">{edu.period} | {edu.location}</p>
+                <p className="mono text-xs text-[#8892b0] mt-1">{edu.period} | {edu.location}</p>
                 
                 <ul className="mt-4 space-y-3">
                   {edu.highlights?.map((highlight, i) => (
-                    <li key={i} className="flex items-center gap-2 text-[#a8b2d1] text-sm leading-relaxed">
+                    <li key={i} className="flex items-center gap-2 text-[#8892b0] text-sm leading-relaxed">
                       <span className="text-[#64ffda] text-[10px]">▹</span>
                       <span><HighlightText text={highlight} /></span>
                     </li>
@@ -601,7 +601,7 @@ const App: React.FC = () => {
         <section id="contact" className="py-32 text-center max-w-2xl mx-auto">
           <p className="mono text-[#64ffda] mb-4 text-sm tracking-widest uppercase">06. Contact</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#ccd6f6] mb-6">{CONTACT_TITLE}</h2>
-          <p className="text-[#a8b2d1] mb-12">
+          <p className="text-[#8892b0] mb-12">
             {CONTACT_DESCRIPTION}
           </p>
           
@@ -636,7 +636,7 @@ const App: React.FC = () => {
           {/* Backdrop */}
           <div 
             onClick={() => setSelectedProject(null)} 
-            className="absolute inset-0 bg-gray-900/50 backdrop-blur-md"
+            className="absolute inset-0 bg-[#020c1b]/90 backdrop-blur-md"
             style={{ zIndex: Z_INDEX.MODAL_OVERLAY }}
           />
           
@@ -644,7 +644,7 @@ const App: React.FC = () => {
           <div className="relative bg-[#112240] w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl border border-[#233554] p-8 md:p-12 reveal scrollbar-hide" style={{ zIndex: Z_INDEX.PROJECT_CONTENT }}>
             <button 
               onClick={() => setSelectedProject(null)} 
-              className="absolute top-6 right-6 text-[#a8b2d1] hover:text-[#64ffda] p-2 z-10"
+              className="absolute top-6 right-6 text-[#8892b0] hover:text-[#64ffda] p-2 z-10"
               aria-label="Close project details"
             >
               <i className="fas fa-times text-xl"></i>
@@ -665,7 +665,7 @@ const App: React.FC = () => {
                 )}
               </div>
               <h2 id="project-modal-title" className="text-3xl md:text-5xl font-bold text-[#ccd6f6] mb-2">{selectedProject.title}</h2>
-              <p className="mono text-[#a8b2d1] text-sm md:text-base">{selectedProject.period}</p>
+              <p className="mono text-[#8892b0] text-sm md:text-base">{selectedProject.period}</p>
               
               {/* Additional Links */}
               {selectedProject.links && selectedProject.links.length > 0 && (
@@ -676,28 +676,7 @@ const App: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#233554] px-3 py-2 rounded hover:bg-[#64ffda]/20 transition-colors"
-                    >
-                      <i className="fas fa-link text-[10px]"></i>
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-              <h2 id="project-modal-title" className="text-3xl md:text-5xl font-bold text-gray-800 mb-2">{selectedProject.title}</h2>
-              <p className="mono text-gray-500 text-sm md:text-base">{selectedProject.period}</p>
-              
-              {/* Additional Links */}
-              {selectedProject.links && selectedProject.links.length > 0 && (
-                <div className="flex flex-wrap gap-3 mt-4">
-                  {selectedProject.links.map((link, idx) => (
-                    <a 
-                      key={idx}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mono text-teal-600 text-xs hover:underline flex items-center gap-2 bg-gray-100 px-3 py-2 rounded hover:bg-gray-200 transition-colors"
+                      className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#233554]/50 px-3 py-2 rounded hover:bg-[#233554] transition-colors"
                     >
                       <i className="fas fa-link text-[10px]"></i>
                       {link.label}
@@ -722,8 +701,8 @@ const App: React.FC = () => {
                         alt={`${selectedProject.title} preview ${idx + 1}`}
                         className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gray-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span className="text-teal-600 text-xs mono uppercase tracking-widest">View</span>
+                      <div className="absolute inset-0 bg-[#020c1b]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-[#64ffda] text-xs mono uppercase tracking-widest">View</span>
                       </div>
                     </div>
                   ))}
@@ -738,7 +717,7 @@ const App: React.FC = () => {
                     <h4 className="text-[#ccd6f6] font-bold text-lg mb-4 flex items-center gap-2">
                       <span className="w-1 h-6 bg-[#64ffda] block"></span> Project Summary
                     </h4>
-                    <p className="text-[#a8b2d1] leading-loose text-[15px]">
+                    <p className="text-[#8892b0] leading-loose text-[15px]">
                       <HighlightText text={selectedProject.summary} />
                     </p>
                   </div>
@@ -748,7 +727,7 @@ const App: React.FC = () => {
                   {selectedProject.goals && (
                     <div>
                       <h4 className="text-[#ccd6f6] font-bold text-sm mono uppercase tracking-wider mb-3 text-[#64ffda]">Goals</h4>
-                      <p className="text-[#a8b2d1] leading-relaxed text-sm">
+                      <p className="text-[#8892b0] leading-relaxed text-sm">
                         <HighlightText text={selectedProject.goals} />
                       </p>
                     </div>
@@ -756,7 +735,7 @@ const App: React.FC = () => {
                   {selectedProject.process && (
                     <div>
                       <h4 className="text-[#ccd6f6] font-bold text-sm mono uppercase tracking-wider mb-3 text-[#64ffda]">Process</h4>
-                      <p className="text-[#a8b2d1] leading-relaxed text-sm">
+                      <p className="text-[#8892b0] leading-relaxed text-sm">
                         <HighlightText text={selectedProject.process} />
                       </p>
                     </div>
@@ -764,9 +743,9 @@ const App: React.FC = () => {
                 </div>
 
                 {selectedProject.output && (
-                  <div className="bg-[#112240] p-6 rounded-lg border border-[#233554]">
+                  <div className="bg-[#0a192f] p-6 rounded-lg border border-[#233554]">
                     <h4 className="text-[#ccd6f6] font-bold text-sm mono uppercase tracking-wider mb-4 text-[#64ffda]">Output</h4>
-                    <p className="text-[#a8b2d1] leading-relaxed text-sm">
+                    <p className="text-[#8892b0] leading-relaxed text-sm">
                       <HighlightText text={selectedProject.output} />
                     </p>
                   </div>
@@ -775,11 +754,11 @@ const App: React.FC = () => {
 
               <div className="space-y-8">
                  {selectedProject.achievements && (
-                   <div className="bg-[#112240] p-6 rounded-lg border-l-4 border-[#64ffda]">
+                   <div className="bg-[#1b2b48] p-6 rounded-lg border-l-4 border-[#64ffda]">
                      <h4 className="text-[#ccd6f6] font-bold mb-4 text-sm mono uppercase tracking-wider">Scope of Work / Achievements</h4>
                      <ul className="space-y-4">
                         {selectedProject.achievements.map((item, i) => (
-                          <li key={i} className="flex gap-3 text-[#a8b2d1] text-xs leading-relaxed">
+                          <li key={i} className="flex gap-3 text-[#8892b0] text-xs leading-relaxed">
                             <span className="text-[#64ffda] shrink-0 mt-0.5">▹</span>
                             <span><HighlightText text={item} /></span>
                           </li>
@@ -788,12 +767,12 @@ const App: React.FC = () => {
                    </div>
                  )}
 
-                 <div className="bg-[#112240] p-6 rounded-lg border border-[#233554]">
+                 <div className="bg-[#0a192f] p-6 rounded-lg border border-[#233554]">
                     <div className="mb-6">
                       <div className="text-[#64ffda] text-3xl font-bold mono">
                         {selectedProject.metricValue.toLocaleString()}{selectedProject.metricLabel.includes('Rating') ? '%' : ''}
                       </div>
-                      <div className="mono text-[10px] text-[#a8b2d1] uppercase tracking-widest">{selectedProject.metricLabel}</div>
+                      <div className="mono text-[10px] text-[#8892b0] uppercase tracking-widest">{selectedProject.metricLabel}</div>
                     </div>
                     <div>
                       <h4 className="text-[#ccd6f6] font-bold text-xs mono uppercase tracking-wider mb-3">Technologies</h4>
@@ -810,13 +789,13 @@ const App: React.FC = () => {
             <div className="mt-12 pt-8 border-t border-[#233554] flex justify-between items-center">
                <button 
                  onClick={() => setSelectedProject(null)} 
-                 className="text-[#a8b2d1] hover:text-[#64ffda] mono text-xs flex items-center gap-2 transition-colors"
+                 className="text-[#8892b0] hover:text-[#64ffda] mono text-xs flex items-center gap-2 transition-colors"
                >
                   <i className="fas fa-arrow-left"></i> Back to Projects
                </button>
-                {selectedProject.note && (
-                  <p className="text-[11px] italic text-[#a8b2d1] max-w-[200px] text-right">{selectedProject.note}</p>
-                )}
+               {selectedProject.note && (
+                 <p className="text-[11px] italic text-[#8892b0] max-w-[200px] text-right">{selectedProject.note}</p>
+               )}
             </div>
           </div>
         </div>
@@ -828,9 +807,9 @@ const App: React.FC = () => {
           className="fixed inset-0 z-[200] flex items-center justify-center p-6"
           onClick={() => setLightboxImage(null)}
         >
-          <div className="absolute inset-0 bg-[#0a192f]/95 backdrop-blur-md" />
+          <div className="absolute inset-0 bg-[#020c1b]/95 backdrop-blur-md" />
           <button 
-            className="absolute top-6 right-6 text-[#a8b2d1] hover:text-[#64ffda] p-2 z-10"
+            className="absolute top-6 right-6 text-[#8892b0] hover:text-[#64ffda] p-2 z-10"
             aria-label="Close lightbox"
           >
             <i className="fas fa-times text-xl"></i>
@@ -840,7 +819,7 @@ const App: React.FC = () => {
           {selectedProject.images.length > 1 && (
             <button 
               onClick={(e) => { e.stopPropagation(); goToPrevImage(); }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#a8b2d1] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#112240] transition-all"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8892b0] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#233554] transition-all"
               aria-label="Previous image"
             >
               <i className="fas fa-chevron-left"></i>
@@ -851,7 +830,7 @@ const App: React.FC = () => {
           {selectedProject.images.length > 1 && (
             <button 
               onClick={(e) => { e.stopPropagation(); goToNextImage(); }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#a8b2d1] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#112240] transition-all"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8892b0] hover:text-[#64ffda] p-3 z-10 bg-[#112240]/80 rounded-full hover:bg-[#233554] transition-all"
               aria-label="Next image"
             >
               <i className="fas fa-chevron-right"></i>
@@ -866,13 +845,13 @@ const App: React.FC = () => {
           />
           
           {/* Image counter */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 mono text-xs text-gray-400 bg-white/80 px-4 py-2 rounded-full">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 mono text-xs text-[#8892b0] bg-[#112240]/80 px-4 py-2 rounded-full">
             {lightboxIndex + 1} / {selectedProject.images.length}
           </div>
         </div>
       )}
 
-      <footer className="py-12 text-center opacity-50 mono text-[10px] text-gray-500">
+      <footer className="py-12 text-center opacity-50 mono text-[10px]">
         Designed & Built by {CV_DATA.name} &copy; {new Date().getFullYear()}
       </footer>
     </div>
