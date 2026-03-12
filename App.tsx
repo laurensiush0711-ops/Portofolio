@@ -158,7 +158,7 @@ const App: React.FC = () => {
   // Nav link class generator
   const navLinkClass = (id: string) => `
     transition-colors duration-300 mono text-[13px] flex items-center gap-1 cursor-pointer
-    ${activeSection === id ? 'text-teal-600' : 'text-gray-700 hover:text-teal-600'}
+    ${activeSection === id ? 'text-[#64ffda]' : 'text-[#ccd6f6] hover:text-[#64ffda]'}
   `;
 
   // Render skill cards grouped by category
@@ -183,7 +183,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`relative min-h-screen bg-white ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
+    <div className={`relative min-h-screen bg-[#0a192f] ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
       
       {/* Sidebars (Desktop only) */}
       <div 
