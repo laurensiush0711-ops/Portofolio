@@ -183,7 +183,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`relative min-h-screen ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
+    <div className={`relative min-h-screen bg-[#0a192f] ${isMenuOpen || selectedProject ? 'overflow-hidden' : ''}`}>
       
       {/* Sidebars (Desktop only) */}
       <div 
@@ -851,7 +851,7 @@ const App: React.FC = () => {
         </div>
       )}
 
-      <footer className="py-12 text-center opacity-50 mono text-[10px]">
+      <footer className="py-12 text-center opacity-50 mono text-[10px] text-[#8892b0]">
         Designed & Built by {CV_DATA.name} &copy; {new Date().getFullYear()}
       </footer>
     </div>
