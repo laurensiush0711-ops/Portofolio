@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   CV_DATA, 
   SKILLS, 
@@ -71,13 +71,7 @@ const App: React.FC = () => {
   // Memoize derived values
   const waNumber = CV_DATA.phone.replace(/[^0-9]/g, '');
   
-  const mailtoLink = useMemo(() => {
-    const subject = encodeURIComponent("Inquiry from your Portfolio");
-    const body = encodeURIComponent(
-      `Hi ${CV_DATA.name.split(' ')[0]},\n\nI came across your portfolio and would like to discuss a potential opportunity.\n\nBest regards,`
-    );
-    return `mailto:${CV_DATA.email}?subject=${subject}&body=${body}`;
-  }, []);
+  const mailtoLink = `mailto:${CV_DATA.email}?subject=${encodeURIComponent("Inquiry from your Portfolio")}&body=${encodeURIComponent(`Hi ${CV_DATA.name.split(' ')[0]},\n\nI came across your portfolio and would like to discuss a potential opportunity.\n\nBest regards,`)}`;
 
   // Scroll to section handler - optimized with useCallback
   const scrollToSection = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -429,7 +423,7 @@ const App: React.FC = () => {
               <HighlightText text={CV_DATA.bio} />
             </div>
             <div className="lg:col-span-2 w-full">
-              <SkillsChart />
+              <SkillsChart category="Technical" />
             </div>
           </div>
         </section>
@@ -619,6 +613,14 @@ const App: React.FC = () => {
               className="px-12 py-5 bg-[#112240] border border-[#233554] text-[#ccd6f6] mono text-sm rounded hover:border-[#64ffda] hover:text-[#64ffda] transition-all flex items-center justify-center gap-3"
             >
               <i className="fab fa-whatsapp text-[#64ffda]"></i> WhatsApp
+            </a>
+            <a 
+              href="https://linkedin.com/in/laurensius-haryo-radyobaskoro-p-373146177" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-12 py-5 bg-[#112240] border border-[#233554] text-[#ccd6f6] mono text-sm rounded hover:border-[#64ffda] hover:text-[#64ffda] transition-all flex items-center justify-center gap-3"
+            >
+              <i className="fab fa-linkedin text-[#64ffda]"></i> LinkedIn
             </a>
           </div>
         </section>

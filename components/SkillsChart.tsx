@@ -22,15 +22,21 @@ import { TooltipPayloadItem, SkillChartData } from '../types';
 // ==========================================
 
 interface SkillsChartProps {
-  category?: 'Data' | 'QA' | 'Tools' | 'Soft Skill' | 'all';
+  category?: 'Data' | 'QA' | 'Tools' | 'Soft Skill' | 'Game Design' | 'AI' | 'Technical' | 'all';
 }
 
 const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
   // Memoize data transformation
   const data = useMemo((): SkillChartData[] => {
-    const filtered = category === 'all' 
-      ? SKILLS 
-      : SKILLS.filter(s => s.category === category);
+    let filtered: typeof SKILLS;
+    
+    if (category === 'Technical') {
+      filtered = SKILLS.filter(s => s.category === 'Data' || s.category === 'Tools');
+    } else if (category === 'all') {
+      filtered = SKILLS;
+    } else {
+      filtered = SKILLS.filter(s => s.category === category);
+    }
     
     return filtered.map(s => ({
       subject: s.name,
@@ -46,6 +52,9 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
       'QA': '#ff6b6b',
       'Tools': '#ffd93d',
       'Soft Skill': '#a78bfa',
+      'Game Design': '#f472b6',
+      'AI': '#38bdf8',
+      'Technical': '#64ffda',
       'all': '#64ffda',
     };
     return colors[category] || '#64ffda';
