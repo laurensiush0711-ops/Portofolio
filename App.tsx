@@ -279,10 +279,10 @@ const App: React.FC = () => {
             ))}
           </ul>
           <a 
-            href="#" 
-            onClick={(e) => { e.preventDefault(); window.print(); }} 
+            href="/Laurensius_Haryo_Resume.pdf" 
+            download="Laurensius_Haryo_Resume.pdf"
             className="px-5 py-2.5 border border-[#64ffda] text-[#64ffda] mono text-[13px] rounded hover:bg-[#64ffda]/10 transition-colors ml-4"
-            aria-label="Print resume"
+            aria-label="Download resume"
           >
             Resume
           </a>
