@@ -653,16 +653,6 @@ const App: React.FC = () => {
             <div className="mb-8">
               <div className="flex flex-wrap items-center gap-4 mb-4">
                 <p className="mono text-[#64ffda] text-xs tracking-widest uppercase bg-[#64ffda]/10 px-3 py-1 rounded">Project Case Study</p>
-                {selectedProject.link && (
-                  <a 
-                    href={selectedProject.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#64ffda]/10 border border-[#64ffda]/30 px-4 py-2 rounded-md transition-all hover:bg-[#64ffda]/20 hover:border-[#64ffda]/60"
-                  >
-                     <i className="fas fa-external-link-alt text-[10px]"></i> View Project
-                  </a>
-                )}
               </div>
               <h2 id="project-modal-title" className="text-3xl md:text-5xl font-bold text-[#ccd6f6] mb-2">{selectedProject.title}</h2>
               <p className="mono text-[#8892b0] text-sm md:text-base">{selectedProject.period}</p>
