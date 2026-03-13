@@ -279,7 +279,7 @@ const App: React.FC = () => {
             ))}
           </ul>
           <a 
-            href="/Laurensius_Haryo_Resume.pdf" 
+            href="/Portofolio/Laurensius_Haryo_Resume.pdf" 
             download="Laurensius_Haryo_Resume.pdf"
             className="px-5 py-2.5 border border-[#64ffda] text-[#64ffda] mono text-[13px] rounded hover:bg-[#64ffda]/10 transition-colors ml-4"
             aria-label="Download resume"
@@ -327,7 +327,7 @@ const App: React.FC = () => {
             </ol>
             <div className="mt-12 flex justify-center">
               <a 
-                href="/Laurensius_Haryo_Resume.pdf" 
+                href="/Portofolio/Laurensius_Haryo_Resume.pdf" 
                 download="Laurensius_Haryo_Resume.pdf"
                 className="px-12 py-4 border border-[#64ffda] text-[#64ffda] mono text-base rounded hover:bg-[#64ffda]/10 transition-colors"
                 aria-label="Download resume"
