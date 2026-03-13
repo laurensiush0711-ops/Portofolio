@@ -327,10 +327,10 @@ const App: React.FC = () => {
             </ol>
             <div className="mt-12 flex justify-center">
               <a 
-                href="#" 
-                onClick={(e) => { e.preventDefault(); window.print(); }} 
+                href="/Laurensius_Haryo_Resume.pdf" 
+                download="Laurensius_Haryo_Resume.pdf"
                 className="px-12 py-4 border border-[#64ffda] text-[#64ffda] mono text-base rounded hover:bg-[#64ffda]/10 transition-colors"
-                aria-label="Print resume"
+                aria-label="Download resume"
               >
                 Resume
               </a>
@@ -619,13 +619,6 @@ const App: React.FC = () => {
               className="px-12 py-5 bg-[#112240] border border-[#233554] text-[#ccd6f6] mono text-sm rounded hover:border-[#64ffda] hover:text-[#64ffda] transition-all flex items-center justify-center gap-3"
             >
               <i className="fab fa-whatsapp text-[#64ffda]"></i> WhatsApp
-            </a>
-            <a 
-              href="/Laurensius Haryo Resume.pdf" 
-              download="Laurensius_Haryo_Resume.pdf"
-              className="px-12 py-5 bg-[#64ffda] text-[#0a192f] mono text-sm rounded hover:bg-[#64ffda]/90 transition-all flex items-center justify-center gap-3 font-semibold"
-            >
-              <i className="fas fa-download"></i> Download Resume
             </a>
           </div>
         </section>
