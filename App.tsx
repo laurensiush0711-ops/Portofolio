@@ -620,6 +620,13 @@ const App: React.FC = () => {
             >
               <i className="fab fa-whatsapp text-[#64ffda]"></i> WhatsApp
             </a>
+            <a 
+              href="/Laurensius Haryo Resume.pdf" 
+              download="Laurensius_Haryo_Resume.pdf"
+              className="px-12 py-5 bg-[#64ffda] text-[#0a192f] mono text-sm rounded hover:bg-[#64ffda]/90 transition-all flex items-center justify-center gap-3 font-semibold"
+            >
+              <i className="fas fa-download"></i> Download Resume
+            </a>
           </div>
         </section>
       </main>
