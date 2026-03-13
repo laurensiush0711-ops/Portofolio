@@ -190,6 +190,14 @@
       "metricLabel": "Playtester Rating",
       "metricValue": 90,
       "link": "https://www.notion.so/Thaumaturgy-Cast-and-Clash?v=aba815ade0684865a331e6b64d0889b9",
+      "links": [
+        { "label": "itch.io", "url": "https://rizeupstudio.itch.io/project-mystic-arts-brawl" },
+        { "label": "Game Design Document", "url": "https://docs.google.com/document/d/1UAzhqANtblU_jHagr8Nlr31NLEFxcXS4/edit?usp=sharing&ouid=100645282026969439442&rtpof=true&sd=true" }
+      ],
+      "images": [
+        "/Portofolio/images/SSCaraBermain4.png",
+        "/Portofolio/images/SSCaraBermain6.png"
+      ],
       "note": "Conducted 6 playtesting sessions with over 50 participants."
     },
     {
@@ -211,8 +219,13 @@
       "metricLabel": "Bugs Documented",
       "metricValue": 120,
       "link": "https://github.com/Parad5050/Red-Covenant",
+      "links": [
+        { "label": "Google Playstore", "url": "https://play.google.com/store/apps/details?id=com.forgefun.redcovenant&pcampaignid=web_share" }
+      ],
       "images": [
-        "/Portofolio/images/Screenshot 2026-03-11 170359.png"
+        "/Portofolio/images/red1.png",
+        "/Portofolio/images/red2.png",
+        "/Portofolio/images/red3.png"
       ],
       "note": "Reduced investigation time by 30% through structured bug categorization."
     }

@@ -658,9 +658,9 @@ const App: React.FC = () => {
                     href={selectedProject.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2"
+                    className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#64ffda]/10 border border-[#64ffda]/30 px-4 py-2 rounded-md transition-all hover:bg-[#64ffda]/20 hover:border-[#64ffda]/60"
                   >
-                     • View Project <i className="fas fa-external-link-alt text-[10px]"></i>
+                     <i className="fas fa-external-link-alt text-[10px]"></i> View Project
                   </a>
                 )}
               </div>
@@ -676,7 +676,7 @@ const App: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#233554]/50 px-3 py-2 rounded hover:bg-[#233554] transition-colors"
+                      className="mono text-[#64ffda] text-xs hover:underline flex items-center gap-2 bg-[#64ffda]/10 border border-[#64ffda]/30 px-4 py-2 rounded-md transition-all hover:bg-[#64ffda]/20 hover:border-[#64ffda]/60"
                     >
                       <i className="fas fa-link text-[10px]"></i>
                       {link.label}
