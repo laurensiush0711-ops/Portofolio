@@ -132,7 +132,7 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
             aria-hidden="true"
           ></div>
           <span className="text-[10px] text-[#8892b0] mono">
-            {category === 'all' ? 'All Skills' : `${category} Skills`}
+            {category === 'all' ? 'All Skills' : category === 'Technical' ? 'Skills' : `${category} Skills`}
           </span>
         </div>
       </div>
