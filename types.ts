@@ -41,7 +41,7 @@ export interface Project {
   note?: string;
 }
 
-export type SkillCategory = 'QA' | 'Data' | 'Tools' | 'Soft Skill';
+export type SkillCategory = 'Programming & Data' | 'Data & AI Tools' | 'Testing & Development Tools' | 'QA & Product Skills' | 'Soft Skill';
 
 export interface Skill {
   id: string; // ADDED: Unique identifier

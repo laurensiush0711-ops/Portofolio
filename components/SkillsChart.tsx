@@ -22,7 +22,7 @@ import { TooltipPayloadItem, SkillChartData } from '../types';
 // ==========================================
 
 interface SkillsChartProps {
-  category?: 'Data' | 'QA' | 'Tools' | 'Soft Skill' | 'Game Design' | 'AI' | 'Technical' | 'all';
+  category?: 'Programming & Data' | 'Data & AI Tools' | 'Testing & Development Tools' | 'QA & Product Skills' | 'Soft Skill' | 'Technical' | 'all';
 }
 
 const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
@@ -31,7 +31,7 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
     let filtered: typeof SKILLS;
     
     if (category === 'Technical') {
-      filtered = SKILLS.filter(s => s.category === 'Data' || s.category === 'Tools');
+      filtered = SKILLS.filter(s => s.category === 'Programming & Data' || s.category === 'Data & AI Tools');
     } else if (category === 'all') {
       filtered = SKILLS;
     } else {
@@ -48,12 +48,11 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ category = 'all' }) => {
   // Memoize color based on category
   const chartColor = useMemo(() => {
     const colors: Record<string, string> = {
-      'Data': '#64ffda',
-      'QA': '#ff6b6b',
-      'Tools': '#ffd93d',
+      'Programming & Data': '#64ffda',
+      'Data & AI Tools': '#ffd93d',
+      'Testing & Development Tools': '#38bdf8',
+      'QA & Product Skills': '#ff6b6b',
       'Soft Skill': '#a78bfa',
-      'Game Design': '#f472b6',
-      'AI': '#38bdf8',
       'Technical': '#64ffda',
       'all': '#64ffda',
     };

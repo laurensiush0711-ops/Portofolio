@@ -156,7 +156,7 @@ const App: React.FC = () => {
   `;
 
   // Render skill cards grouped by category
-  const renderSkillCard = (category: 'Data' | 'QA' | 'Tools' | 'Soft Skill') => {
+  const renderSkillCard = (category: 'Programming & Data' | 'Data & AI Tools' | 'Testing & Development Tools' | 'QA & Product Skills' | 'Soft Skill') => {
     const categorySkills = SKILLS.filter(s => s.category === category);
     
     return (
@@ -438,9 +438,9 @@ const App: React.FC = () => {
           </div>
           <div className="border border-[#64ffda]/30 rounded-lg p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {renderSkillCard('Data')}
-              {renderSkillCard('QA')}
-              {renderSkillCard('Tools')}
+              {renderSkillCard('Programming & Data')}
+              {renderSkillCard('QA & Product Skills')}
+              {renderSkillCard('Testing & Development Tools')}
               {renderSkillCard('Soft Skill')}
             </div>
           </div>
